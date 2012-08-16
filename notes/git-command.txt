@@ -1,0 +1,120 @@
+
+1. ssh key generate
+
+https://help.github.com/articles/generating-ssh-keys
+
+
+ssh-keygen -t rsa -C "litroncn@gmail.com"
+
+
+
+thomas@ubuntu 127:~$ ssh-keygen -t rsa -C "litroncn@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/thomas/.ssh/id_rsa):      
+Created directory '/home/thomas/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/thomas/.ssh/id_rsa.
+Your public key has been saved in /home/thomas/.ssh/id_rsa.pub.
+The key fingerprint is:
+2f:15:70:56:bd:a4:f2:fa:11:7f:2a:17:e2:f7:ae:fc litroncn@gmail.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|        . o...   |
+|         +    o  |
+|          .  o . |
+|          ... .  |
+|        S .o.    |
+|         o  oo.  |
+|        . .o.....|
+|         .. oooo |
+|           ..++=E|
++-----------------+
+
+
+2. ssh -vT git@github.com
+
+[linux-devkit]:/home/thomas> ssh -vT git@github.com
+OpenSSH_5.3p1 Debian-3ubuntu7, OpenSSL 0.9.8k 25 Mar 2009
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Applying options for *
+debug1: Connecting to github.com [207.97.227.239] port 22.
+debug1: Connection established.
+debug1: permanently_set_uid: 0/0
+debug1: identity file /root/.ssh/identity type -1
+debug1: identity file /root/.ssh/id_rsa type 1
+debug1: Checking blacklist file /usr/share/ssh/blacklist.RSA-2048
+debug1: Checking blacklist file /etc/ssh/blacklist.RSA-2048
+debug1: identity file /root/.ssh/id_dsa type -1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_5.5p1 Debian-6+squeeze1+github8
+debug1: match: OpenSSH_5.5p1 Debian-6+squeeze1+github8 pat OpenSSH*
+debug1: Enabling compatibility mode for protocol 2.0
+debug1: Local version string SSH-2.0-OpenSSH_5.3p1 Debian-3ubuntu7
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: server->client aes128-ctr hmac-md5 none
+debug1: kex: client->server aes128-ctr hmac-md5 none
+debug1: SSH2_MSG_KEX_DH_GEX_REQUEST(1024<1024<8192) sent
+debug1: expecting SSH2_MSG_KEX_DH_GEX_GROUP
+debug1: SSH2_MSG_KEX_DH_GEX_INIT sent
+debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY
+debug1: Host 'github.com' is known and matches the RSA host key.
+debug1: Found key in /root/.ssh/known_hosts:1
+debug1: ssh_rsa_verify: signature correct
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: SSH2_MSG_SERVICE_REQUEST sent
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: litroncn@gmail.com
+debug1: Authentications that can continue: publickey
+debug1: Trying private key: /root/.ssh/identity
+debug1: Offering public key: /root/.ssh/id_rsa
+debug1: Server accepts key: pkalg ssh-rsa blen 277
+debug1: PEM_read_PrivateKey failed
+debug1: read PEM private key done: type <unknown>
+Enter passphrase for key '/root/.ssh/id_rsa': 
+debug1: read PEM private key done: type RSA
+debug1: Authentication succeeded (publickey).
+debug1: channel 0: new [client-session]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: Remote: Forced command: gerve darwinbeing 99:46:97:45:fe:af:29:ff:83:cc:3b:d8:10:22:97:26
+debug1: Remote: Port forwarding disabled.
+debug1: Remote: X11 forwarding disabled.
+debug1: Remote: Agent forwarding disabled.
+debug1: Remote: Pty allocation disabled.
+debug1: Remote: Forced command: gerve darwinbeing 99:46:97:45:fe:af:29:ff:83:cc:3b:d8:10:22:97:26
+debug1: Remote: Port forwarding disabled.
+debug1: Remote: X11 forwarding disabled.
+debug1: Remote: Agent forwarding disabled.
+debug1: Remote: Pty allocation disabled.
+debug1: Sending environment.
+debug1: Sending env LANG = en_US.UTF-8
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+debug1: client_input_channel_req: channel 0 rtype eow@openssh.com reply 0
+Hi darwinbeing! You've successfully authenticated, but GitHub does not provide shell access.
+debug1: channel 0: free: client-session, nchannels 1
+Transferred: sent 2624, received 3016 bytes, in 1.2 seconds
+Bytes per second: sent 2275.2, received 2615.1
+debug1: Exit status 1
+
+OK.....
+
+
+SSH关于公钥认证Permission denied (publickey,gssapi-with-mic的问题)  
+
+2011-03-03 13:22:51|  分类： linux狭路相逢 |  标签：permission  denied  ssh  publickey  gssapi-with-mic   |字号 订阅
+修改/etc/ssh/sshd-config文件
+PermitRootLogin no 修改为yes，
+PubkeyAuthentication yes修改为no
+AuthorizedKeysFile     .ssh/authorized_keys前面加上#屏蔽掉
+PasswordAuthentication no修改为yes
+
+
+1.
+git pull origin master 就是将origin这个版本库的代码更新到本地的master主枝
+
+2. git push
