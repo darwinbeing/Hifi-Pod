@@ -1,6 +1,11 @@
 
 1. ssh key generate
 
+
+git config --global user.name "darwinbeing"  
+git config --global user.email "litroncn@gmail.com" 
+
+
 https://help.github.com/articles/generating-ssh-keys
 
 
