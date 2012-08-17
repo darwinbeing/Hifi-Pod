@@ -1,5 +1,7 @@
 Qt Media Player
 
+Qt Media Player
+
 Description:
 Simple media player with minimal dependency and many optionnal features.
 Mandatory features:
