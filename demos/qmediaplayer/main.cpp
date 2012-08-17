@@ -47,9 +47,6 @@ const qreal DefaultVolume = -1.0;
 
 int main (int argc, char *argv[])
 {
-#ifdef Q_WS_QWS
-    QWSServer::setCursorVisible( false );
-#endif
 
     Q_INIT_RESOURCE(mediaplayer);
     QApplication app(argc, argv);
@@ -57,6 +54,11 @@ int main (int argc, char *argv[])
 //    app.setOrganizationName("Qt");
     app.setQuitOnLastWindowClosed(true);
     QApplication::setStyle("macintosh");
+
+// #ifdef Q_WS_QWS
+//     QWSServer::setCursorVisible( false );
+// #endif
+
 
     QString fileName;
     qreal volume = DefaultVolume;
