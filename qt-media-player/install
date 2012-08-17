@@ -1,0 +1,4 @@
+#!/bin/sh
+make clean
+qmake CONFIG+=release
+make && make install
