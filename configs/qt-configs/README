@@ -5,3 +5,127 @@ http://processors.wiki.ti.com/index.php/Building_Qt
 
 This repo contains information on Qt configuration information for building with SGX on TI platforms - out of tree (ie, standalone). It is still preferred to build-in-tree with distributions like Angstrom, Ubuntu etc 
 https://github.com/prabindh/qt-configs
+
+
+build qt-4.8.2
+
+1. check the environment by issuing the command: env, make sure there is no Qt related defined, if not remove them, no QMAKESPEC defined.
+
+2. all defined in the qmake.conf, the following qmake config is mine for cortex-A8 proccesor
+
+
+
+#
+# qmake configuration for building with arm-linux-g++
+#
+
+include(../../common/linux.conf)
+include(../../common/gcc-base-unix.conf)
+include(../../common/g++-unix.conf)
+include(../../common/qws.conf)
+
+
+
+# modifications to g++.conf
+#Toolchain
+
+TI_SDK_TOOLCHAIN_DIR = /usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi
+
+TSLIB_INCDIR = $$TI_SDK_TOOLCHAIN_DIR/usr/include
+TSLIB_LIBDIR = $$TI_SDK_TOOLCHAIN_DIR/usr/lib
+
+GLIB_INCDIR            = $$TI_SDK_TOOLCHAIN_DIR/usr/include/glib-2.0
+GLIB_CONFIGINCLUDEDIR	= $$TI_SDK_TOOLCHAIN_DIR/usr/lib/glib-2.0/include
+GST_INCLUDEDIR	= $$TI_SDK_TOOLCHAIN_DIR/usr/include/gstreamer-0.10
+LIBXML_INCLUDEDIR = $$TI_SDK_TOOLCHAIN_DIR/usr/include/libxml2
+
+#Compiler Flags to take advantage of the ARM architecture
+QMAKE_CFLAGS_RELEASE	= -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
+QMAKE_CXXFLAGS_RELEASE	= -O3 -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
+QMAKE_CC                = arm-arago-linux-gnueabi-gcc
+QMAKE_CXX               = arm-arago-linux-gnueabi-g++
+QMAKE_LINK              = arm-arago-linux-gnueabi-g++
+QMAKE_LINK_SHLIB        = arm-arago-linux-gnueabi-g++
+
+# modifications to linux.conf
+QMAKE_AR = arm-arago-linux-gnueabi-ar cqs
+QMAKE_OBJCOPY = arm-arago-linux-gnueabi-objcopy
+QMAKE_STRIP = arm-arago-linux-gnueabi-strip
+
+
+#modified for Qt4.8
+QMAKE_COPY = cp
+QMAKE_DEL_FILE = rm
+QMAKE_DEL_DIR = rm -r
+QMAKE_MOVE = mv
+QMAKE_CHK_DIR_EXISTS = test -d
+QMAKE_MKDIR = mkdir -p
+
+QMAKE_INCDIR += $$TSLIB_INCDIR
+QMAKE_LIBDIR += $$TSLIB_LIBDIR
+
+QMAKE_INCDIR += $$TSLIB_INCDIR 
+QMAKE_INCDIR += $$GLIB_INCDIR 
+QMAKE_INCDIR += $$GLIB_CONFIGINCLUDEDIR
+QMAKE_INCDIR += $$GST_INCLUDEDIR
+QMAKE_INCDIR += $$LIBXML_INCLUDEDIR
+
+QMAKE_LIBDIR += $$TSLIB_LIBDIR
+QMAKE_LIBS += -lts -lglib-2.0 -lgthread-2.0 -lgstreamer-0.10
+
+load(qt_config)
+
+3. build the qt
+
+./configure -prefix /opt/qt -embedded arm -xplatform qws/linux-TIarmv7-g++ -qt-mouse-pc -qt-mouse-linuxtp -qt-mouse-linuxinput -qt-mouse-tslib -plugin-mouse-linuxtp -plugin-mouse-pc -phonon -phonon-backend -no-rpath -opensource  -confirm-license
+
+
+4. My env list
+
+ORBIT_SOCKETDIR=/tmp/orbit-root
+SSH_AGENT_PID=1711
+TERM=xterm
+SHELL=/bin/bash
+XDG_SESSION_COOKIE=420597a87db8bd326549455e4f75a29d-1345282300.856240-2011536194
+WINDOWID=60817411
+QTDIR=/opt/qt
+OLDPWD=/root/Hifi-Pod/configs
+GNOME_KEYRING_CONTROL=/tmp/keyring-UWqxDC
+GTK_MODULES=canberra-gtk-module
+JRE_HOME=/opt/jdk1.6.0_23/jre
+USER=root
+LD_LIBRARY_PATH=/opt/qt/lib:
+LS_COLORS=rs=0:di=01;34:ln=01;36:hl=44;37:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+SSH_AUTH_SOCK=/tmp/keyring-UWqxDC/ssh
+DEFAULTS_PATH=/usr/share/gconf/gnome.default.path
+SESSION_MANAGER=local/ubuntu:@/tmp/.ICE-unix/1646,unix/ubuntu:/tmp/.ICE-unix/1646
+USERNAME=root
+XDG_CONFIG_DIRS=/etc/xdg/xdg-gnome:/etc/xdg
+DESKTOP_SESSION=gnome
+PATH=/usr/local/ti-sdk-am335x-evm/linux-devkit/bin:/opt/qt/bin:/opt/jdk1.6.0_23/jre/bin:/opt/jdk1.6.0_23/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/jdk1.6.0_23/bin:/opt/jdk1.6.0_23/bin/tools.jar:/opt/jdk1.6.0_23/jre/bin
+PWD=/root/Hifi-Pod/configs/qt-configs
+JAVA_HOME=/opt/jdk1.6.0_23
+GDM_KEYBOARD_LAYOUT=us
+LANG=en_US.UTF-8
+GNOME_KEYRING_PID=1628
+MANDATORY_PATH=/usr/share/gconf/gnome.mandatory.path
+GDM_LANG=en_US.UTF-8
+WINEDTIOR=emacs
+PS1=\[\e[32;1m\][linux-devkit]\[\e[0m\]:\w> 
+ANDROID_JAVA_HOME=/opt/jdk1.6.0_23
+GDMSESSION=gnome
+SPEECHD_PORT=6560
+SHLVL=1
+HOME=/root
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=root
+CLASSPATH=.:/opt/jdk1.6.0_23/lib:/opt/jdk1.6.0_23/jre/lib:
+XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ouP4HMlkDB,guid=057a92df7683f41bf70cdf41502f60fe
+LESSOPEN=| /usr/bin/lesspipe %s
+DISPLAY=:1.0
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XAUTHORITY=/var/run/gdm/auth-for-root-NC3Fo9/database
+COLORTERM=gnome-terminal
+_=/usr/bin/env
+
