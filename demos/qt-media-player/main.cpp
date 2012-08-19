@@ -7,7 +7,10 @@ int main(int argc, char *argv[]) {
 #ifdef USE_FTP
     FtpEngineHandler ftp;
 #endif
-    Player player; player.show(); return a.exec();
+    Player player; 
+//    player.show(); 
+    player.showFullScreen();
+    return a.exec();
 }
 
 Player::Player() : dialog(0) {

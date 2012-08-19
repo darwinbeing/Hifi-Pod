@@ -28,15 +28,15 @@ Hotkey::Hotkey(QString shortcut, QObject* parent ) : QObject(parent) {
     QString keystring = QKeySequence((QKeySequence(shortcut)[0] ^ allMods) & QKeySequence(shortcut)[0]).toString();
     KeySym keysym = XStringToKeysym(keystring.toLatin1().data());
     if(!keysym && shortcut=="XF86AudioPlay") keysym=0x1008ff14;
-    key=XKeysymToKeycode(QX11Info::display(),keysym );
+//    key=XKeysymToKeycode(QX11Info::display(),keysym );
     hotkeys[QPair<quint32, quint32>(key,mods)] = this;
 //    XGrabKey(QX11Info::display(), key, mods, QX11Info::appRootWindow(), True, GrabModeAsync, GrabModeAsync);
 //    XGrabKey(QX11Info::display(), key, mods|Mod2Mask, QX11Info::appRootWindow(), True, GrabModeAsync, GrabModeAsync);
-    XSync(QX11Info::display(), False);
+//    XSync(QX11Info::display(), False);
 }
 void Hotkey::activate() { emit activated(); }
 Hotkey::~Hotkey() {
 //    XUngrabKey(QX11Info::display(), key, mods, QX11Info::appRootWindow());
 //    XUngrabKey(QX11Info::display(), key, mods|Mod2Mask, QX11Info::appRootWindow());
-    XSync(QX11Info::display(), False);
+//    XSync(QX11Info::display(), False);
 }

@@ -11,7 +11,9 @@ FileDialog::FileDialog(QWidget* parent,QString caption,QString path,QString) : Q
     QVBoxLayout* layout = new QVBoxLayout(this);
     layout->addWidget(&view);
     view.setRootIndex(fileSystem.setRootPath(path));
-    view.resizeColumnToContents(0); setMinimumHeight(600); setMinimumWidth(view.columnWidth(0));
+//    view.resizeColumnToContents(0); setMinimumHeight(600); setMinimumWidth(view.columnWidth(0));
+//    view.resizeColumnToContents(0); setMinimumHeight(300); setMinimumWidth(view.columnWidth(0));
+
     QPushButton* openButton = new QPushButton(QIcon::fromTheme("document-open"),"Open");
     connect(openButton,SIGNAL(clicked()),this,SLOT(accept()));
     layout->addWidget(openButton);
