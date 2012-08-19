@@ -60,14 +60,14 @@ void AVFile::open( QString path ) {
     if(file) close();
     audioPTS=0;
     if(avformat_open_input(&file, path.toUtf8(),0,0)) { file=0; return; }
-    av_find_stream_info(file);
+    avformat_find_stream_info(file, NULL);
     for( uint i=0; i<file->nb_streams; i++ ) {
         if( !audioOutput.empty() && file->streams[i]->codec->codec_type==AVMEDIA_TYPE_AUDIO ) {
             audioStream = file->streams[i];
             audio = audioStream->codec;
             audio->sample_fmt = AV_SAMPLE_FMT_FLT;
             AVCodec* codec = avcodec_find_decoder(audio->codec_id);
-            if( codec && avcodec_open( audio, codec ) >= 0 ) {
+            if( codec && avcodec_open2( audio, codec, NULL ) >= 0 ) {
                 audioFormat.frequency = audio->sample_rate;
                 audioFormat.channels = audio->channels;
                 Q_ASSERT_X( audioFormat.frequency, "AVFile::open", path.toAscii() );
@@ -78,7 +78,7 @@ void AVFile::open( QString path ) {
             videoStream = file->streams[i];
             video = videoStream->codec;
             AVCodec* codec = avcodec_find_decoder(video->codec_id);
-            if( codec && avcodec_open( video, codec ) >= 0 ) {
+            if( codec && avcodec_open2( video, codec, NULL ) >= 0 ) {
                 videoFormat.width = video->width;
                 videoFormat.height = video->height;
             }
@@ -100,25 +100,84 @@ void AVFile::stop() {
     if( hasVideo() ) foreach(VideoOutput* output, videoOutput) output->stop();
 }
 void AVFile::seek( int time ) {
-    if( av_seek_frame(file,-1,time*1000,0) < 0 )
-        avformat_seek_file(file,0,0,time*file->file_size/duration(),file->file_size,AVSEEK_FLAG_BYTE);
+//    if( av_seek_frame(file,-1,time*1000,0) < 0 )
+//        avformat_seek_file(file,0,0,time*file->file_size/duration(),file->file_size,AVSEEK_FLAG_BYTE);
+
+     if( av_seek_frame(file,-1,time*1000,0) < 0 ) {
+	  AVIOContext *pb = file->pb;
+	  int file_size = avio_size(pb);
+	  
+	  avformat_seek_file(file,0,0,time*file_size/duration(),file_size,AVSEEK_FLAG_BYTE);
+     }
+     
+
+
 }
 void AVFile::close() {
     if(playing) stop();
     if( hasAudio() ) { avcodec_close(audio); audio=0; }
     if( hasVideo() ) { avcodec_close(video); video=0; }
-    if(file) { av_close_input_file(file); file=0; }
+    if(file) { avformat_close_input(&file); file=0; }
 }
 
 int64_t AVFile::duration() { return file->duration/1000; }
 #ifndef USE_TAGLIB
 QString AVFile::metadata( QString key ) {
     if( !file ) return "";
-    AVMetadataTag* tag = av_metadata_get( file->metadata, key.toAscii(), 0, 0 );
+    AVDictionaryEntry * tag = av_dict_get ( file->metadata, key.toAscii(), 0, 0 );
     if( !tag ) return "";
     return QString( tag->value );
 }
 #endif
+
+
+
+int avcodec_decode_audio3(AVCodecContext *avctx, int16_t *samples,
+                         int *frame_size_ptr,
+                         AVPacket *avpkt)
+{
+    AVFrame frame;
+    int ret, got_frame = 0;
+
+    if (avctx->get_buffer != avcodec_default_get_buffer) {
+        av_log(avctx, AV_LOG_ERROR, "Custom get_buffer() for use with"
+               "avcodec_decode_audio3() detected. Overriding with avcodec_default_get_buffer\n");
+        av_log(avctx, AV_LOG_ERROR, "Please port your application to "
+               "avcodec_decode_audio4()\n");
+        avctx->get_buffer = avcodec_default_get_buffer;
+        avctx->release_buffer = avcodec_default_release_buffer;
+    }
+
+    ret = avcodec_decode_audio4(avctx, &frame, &got_frame, avpkt);
+
+    if (ret >= 0 && got_frame) {
+        int ch, plane_size;
+        int planar = av_sample_fmt_is_planar(avctx->sample_fmt);
+        int data_size = av_samples_get_buffer_size(&plane_size, avctx->channels,
+                                                   frame.nb_samples,
+                                                   avctx->sample_fmt, 1);
+        if (*frame_size_ptr < data_size) {
+            av_log(avctx, AV_LOG_ERROR, "output buffer size is too small for "
+                   "the current frame (%d < %d)\n", *frame_size_ptr, data_size);
+            return AVERROR(EINVAL);
+        }
+
+        memcpy(samples, frame.extended_data[0], plane_size);
+
+        if (planar && avctx->channels > 1) {
+            uint8_t *out = ((uint8_t *)samples) + plane_size;
+            for (ch = 1; ch < avctx->channels; ch++) {
+                memcpy(out, frame.extended_data[ch], plane_size);
+                out += plane_size;
+            }
+        }
+        *frame_size_ptr = data_size;
+    } else {
+        *frame_size_ptr = 0;
+    }
+    return ret;
+}
+
 
 void AVFile::update() {
     if(!playing) return;
@@ -146,8 +205,11 @@ void AVFile::update() {
                 pkt.size -= size;
                 pkt.data += size;
                 if( frame->size ) {
+		     AVIOContext *pb = file->pb;
+		     int file_size = avio_size(pb);
+
                     if(pkt.dts>=0) audioPTS = pkt.dts*av_q2d(audioStream->time_base)*1000;
-                    else audioPTS=pkt.pos*duration()/file->file_size;
+                    else audioPTS=pkt.pos*duration()/file_size;
                     foreach(AudioOutput* output, audioOutput) output->write( frame->copy() );
                 }
                 frame->free();
