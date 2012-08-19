@@ -36,7 +36,7 @@
 
 #include "StreamMusicTest/MyMusicTest.h"
 
-#define PAGE_COUNT 6
+#define PAGE_COUNT 7
 
 class NaviBar : public QObject, public QGraphicsRectItem
 {
@@ -69,7 +69,7 @@ NaviBar::NaviBar()
     setPen(Qt::NoPen);
 
     QStringList names;
-    names << "map" << "web" << "home" << "weather" << "contacts" << "ipod";
+    names << "map" << "web" << "home" << "weather" << "contacts" << "ipod" << "wifi";
     for (int i = 0; i < names.count(); ++i) {
         QString fname = names[i];
         fname.prepend(":/icons/");
@@ -252,8 +252,8 @@ private:
         qsrand(QTime::currentTime().second());
 
         QStringList names;
-        names << "brownies" << "cookies" << "mussels" << "pizza" << "sushi" << "sushi";
-        names << "chocolate" << "fish" << "pasta" << "puding" << "trouts" << "trouts";
+        names << "brownies" << "cookies" << "mussels" << "pizza" << "sushi" << "sushi" << "sushi";
+        names << "chocolate" << "fish" << "pasta" << "puding" << "trouts" << "trouts" << "chocolate";
 
         for (int i = 0; i < PAGE_COUNT * 2; ++i) {
             QString fname = names[i];
