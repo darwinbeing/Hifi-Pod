@@ -1,0 +1,13 @@
+
+1. Cleaning the Sources
+If you did not use a separate object directory:
+make CROSS_COMPILE=arm-arago-linux-gnueabi- ARCH=arm distclean
+If you used 'O=am335x' as your object directory:
+
+2. remove separate object directories
+rm -rf ./am335x
+
+3. Building into a separate object directory with the "O=" parameter to make is strongly recommended.
+make O=am335x CROSS_COMPILE=arm-arago-linux-gnueabi- ARCH=arm  am335x_evm
+
+This will generate two binaries in the am335x directory, MLO and u-boot.img along with other intermediate binaries that may be needed in some cases.
