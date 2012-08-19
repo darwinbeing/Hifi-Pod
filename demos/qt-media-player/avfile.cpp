@@ -131,7 +131,7 @@ QString AVFile::metadata( QString key ) {
 #endif
 
 
-
+/*
 int avcodec_decode_audio3(AVCodecContext *avctx, int16_t *samples,
                          int *frame_size_ptr,
                          AVPacket *avpkt)
@@ -177,7 +177,7 @@ int avcodec_decode_audio3(AVCodecContext *avctx, int16_t *samples,
     }
     return ret;
 }
-
+*/
 
 void AVFile::update() {
     if(!playing) return;
