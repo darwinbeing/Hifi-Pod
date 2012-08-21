@@ -1,0 +1,34 @@
+QMPlay compilation tutorial.
+
+Windows:
+	- run compile_win.bat
+MacOS:
+	- run compile_mac
+Linux/BSD:
+	- run ./compile_unix in terminal!
+
+You need:
+	Windows:
+		- Qt4-MinGW and MinGW ( GCC )
+		- mingw32-make.exe and other binaries and libraries in %PATH%
+	MacOS:
+		- XCode ( GCC ) and Qt4-Carbon
+	Linux/BSD:
+		- GCC
+		- PulseAudio
+	All platforms:
+		- qt4 ( including OpenGL )
+		- portaudio
+		- openal ( optional )
+		- libao ( optional )
+		- libcdio, libcddb
+		- taglib
+		- libmikmod ( optional )
+		- libmodplug ( built-in since 1.54.06 )
+		- libmpg123
+		- libogg, libvorbis
+		- libsndfile
+		- libcurl
+
+Check INCLUDEPATH in "src/plugins/func_tag_editor/func_tag_editor.pro"!
+If you want to disable or enable plugins, edit "src/plugins/plugins.pro" file!

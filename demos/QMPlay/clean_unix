@@ -1,0 +1,18 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"
+
+echo -n "Do you want to remove Makefiles and build directories form \"$PWD\" ? [n/y] "
+read wybor
+if [ ! -z $wybor ]; then
+	if [ $wybor == 'Y' ] || [ $wybor == 'y' ]; then
+		rm -rf `find . | grep Makefile`
+		rm -rf `find . | grep build`
+
+		echo Cleaned!
+
+		exit 0
+	fi
+fi
+
+exit 1

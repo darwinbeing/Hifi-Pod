@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form3</class>
+ <widget class="QWidget" name="Form3">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>390</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>450</width>
+    <height>390</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Ustawienia</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff/>
+   </iconset>
+  </property>
+  <widget class="QCheckBox" name="enabledB">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Włącz wtyczkę</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ApplyB">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>360</y>
+     <width>431</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zastosuj</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="speedB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>95</y>
+     <width>61</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Szybkość odczytu płyty</string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>52</number>
+   </property>
+   <property name="value">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>100</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>x</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="trackB">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>35</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dodaj ścieżki z
+płyty do listy</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="driveE">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>65</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Ścieżka do napędu CD albo obrazu płyty</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="driveB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>35</y>
+     <width>131</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Tutaj wybierasz swój napęd CD</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ejectB">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>35</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Wysuń tackę</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="closeTB">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>65</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Wsuń tackę</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="canCloseTB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>145</y>
+     <width>251</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Wsuwaj tackę CD podczas odczytu</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="useCDDBB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Używaj CDDB</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>195</y>
+     <width>411</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QRadioButton" name="qmpCacheB">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Umieść pamięć podręczną
+CDDB w katalogu z QMPlay</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="defCacheB">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Użyj domyślnej lokalizacji dla
+pamięci podręcznej CDDB</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>171</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Baza danych CDDB</string>
+    </property>
+    <widget class="QRadioButton" name="useFDBB">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Użyj freedb.org</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="userDatabaseServerB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="useUserDatabaseB">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Użyj własnej</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="useCddbpB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>75</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Użyj Cddbp</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QCheckBox" name="clrB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>291</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Czyść listę podczas dodawania AudioCD</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="readCDTXTB">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>95</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Odczytuj CD-TEXT</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>enabledB</tabstop>
+  <tabstop>driveB</tabstop>
+  <tabstop>driveE</tabstop>
+  <tabstop>speedB</tabstop>
+  <tabstop>clrB</tabstop>
+  <tabstop>canCloseTB</tabstop>
+  <tabstop>useCDDBB</tabstop>
+  <tabstop>readCDTXTB</tabstop>
+  <tabstop>defCacheB</tabstop>
+  <tabstop>qmpCacheB</tabstop>
+  <tabstop>useFDBB</tabstop>
+  <tabstop>useUserDatabaseB</tabstop>
+  <tabstop>useCddbpB</tabstop>
+  <tabstop>userDatabaseServerB</tabstop>
+  <tabstop>ejectB</tabstop>
+  <tabstop>closeTB</tabstop>
+  <tabstop>trackB</tabstop>
+  <tabstop>ApplyB</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

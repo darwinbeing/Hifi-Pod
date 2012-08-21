@@ -1,0 +1,52 @@
+<ui version="4.0" >
+ <class>FormC</class>
+ <widget class="QWidget" name="FormC" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>293</width>
+    <height>105</height>
+   </rect>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>245</width>
+    <height>75</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>Kopiowanie</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset>
+    <normaloff/>
+   </iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" >
+   <item>
+    <widget class="QLabel" name="fL" >
+     <property name="text" >
+      <string>File name</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="pB" >
+     <property name="value" >
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="brB" >
+     <property name="text" >
+      <string>Przerwij</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

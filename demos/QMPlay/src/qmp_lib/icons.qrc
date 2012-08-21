@@ -1,0 +1,12 @@
+<RCC><qresource>
+	<file>icons/play_64x64.png</file>
+	<file>icons/sound.png</file>
+	<file>icons/plug.png</file>
+
+	<file>icons/play.png</file>
+	<file>icons/stop.png</file>
+	<file>icons/prev.png</file>
+	<file>icons/nxt.png</file>
+	<file>icons/pause.png</file>
+	<file>icons/rec.png</file>
+</qresource></RCC>

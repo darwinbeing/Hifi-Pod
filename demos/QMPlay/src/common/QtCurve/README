@@ -1,0 +1,7 @@
+QtCurve-1.4.3-z166
+
+QtCurve was downloaded from: http://www.kde-look.org/content/show.php?content=40492
+
+QtCurve style which can run without KDE4 and Windows, patched by zaps166.
+
+If you want to compile QtCurve for Windows, MacOS, Linux and other OS, open "style" directory and first run "qmake". It requires QT4 devel.

@@ -1,0 +1,436 @@
+Zmiany w QMPlay v1.54.06 :
+	- poprawiony zapis playlisty z okna dialogowego wyboru pliku,
+	- przywrócenie działania wrzuty i usunięcie 4shared,
+	- wbudowanie libmodplug wraz z obsługą J2B,
+	- Mikmod nie jest domyślnie kompilowany,
+
+Zmiany w QMPlay v1.54.05 :
+	- poprawne pokazywanie postępu odtwarzania w okienku informacji na liście,
+	- poprawiona stabilność programu ( dodane brakujące mutex'y xD ),
+	- poprawiona zmiana pewnych ustawień podczas odtwarzania we wtyczce ModPlug,
+
+Zmiany w QMPlay v1.54.04 :
+	- poprawione działanie AudioCD,
+	- usunięte "freedb2" z wtyczki AudioCD,
+	- możliwość ustawienia wysokiej jakości resamplingu,
+	- po dodaniu do pustej listy więcej niż jednego pliku zawierającego obrazek, wyświetla się on już od razu,
+	- zmiana ikony OGG Vorbis,
+	- wyczyszczone ustawiania wtyczki do skojarzeń plików w Windows - teraz można z łatwością skojarzyć QMPlay z formatem FLAC ( program zapyta się po uruchomieniu ),
+	- przetłumaczenie wtyczki AudioCD,
+	- poprawione wczytywanie/zapisywanie ustawień,
+
+Zmiany w QMPlay v1.54.03 :
+	- możliwość zmiany częstotliwości próbkowania w generatorze częstotliwości,
+	- 8 kanałów w generatorze częstotliwości,
+	- obsługa edycji tagów we wtyczce sndfile,
+	- pełna obsługa plików FLAC wraz z edycją tagów,
+	- poprawa edycji tagów ( np. obrazki we FLAC ),
+	- ukrywanie pliku konfiguracyjnego w Windows,
+	- drobne poprawy błędów,
+
+Zmiany w QMPlay v1.54.02 :
+	- możliwość ustawienia opóźnienia we wtyczce PulseAudio,
+	- możliwość odczytu plików w Windows 98 ( problem z odczytem występował w poprzedniej wersji programu ),
+	- poprawa skojarzeń plików w Windows 98,
+	- drobne poprawki,
+
+Zmiany w QMPlay v1.54.01 :
+	- dodałem obsługę PulseAudio,
+	- poprawiłem działanie dźwięków 32bit i 24bit,
+	- drobne poprawki we wtyczkach OpenAL i libAO,
+	- poprawa wczytywania informacji o muzyce dla OGG Vorbis,
+	- poprawa wczytywania plików o nazwach innych niż obsługuje to kodowanie znaków w Windows,
+	- poprawa pokazywania czasu i max. głośny dźwięk we wtyczce "Sound Generator",
+	- poprawione dodawanie katalogów wraz z podkatalogami,
+	- napisałem od początku przesyłanie sygnałów ( m.in. poprawiłem dodawanie plików do kolejki ),
+	- napisałem od początku wczytywanie, zapisywanie i tworzenie playlist M3U i PLS,
+	- systemowe okna dialogowe wyboru plików / katalogów,
+	- przywrócenie działania wrzuty,
+	- nowe ułożenie plików źródłowych i skryptów do kompilacji,
+
+Zmiany w QMPlay v1.53.10 :
+	- wrzuta.pl znów działa (ach, te ich zmiany na stronie),
+	- poprawione kodowanie znaków na liście urządzeń audio w Windows,
+
+Zmiany w QMPlay v1.53.09 :
+	- usunięcie z paczki wtyczki OpenAL,
+	- obsługa dźwięku wielokanałowego przez PortAudio w Windows,
+	- poprawiona wtyczka "Music Browser" ( m.in. dodawanie się utworów do niewłaściwej listy ),
+	- poprawiony działanie wtyczki "Radio Browser" na procesorach big endian,
+
+Zmiany w QMPlay v1.53.08 :
+	- poprawiłem wyświetlanie polskich i innych znaków w tytułach stacji radiowych,
+	- dodałem możliwość słuchania radio po naciśnięciu "Enter",
+	- wykrywanie języka po pierwszym uruchomieniu programu,
+
+Zmiany w QMPlay v1.53.07 :
+	- poprawiono błąd z wyciszeniem dźwięku podczas nagrywania (opcja "Odtwarzaj dźwięk"),
+	- podczas pobierania pliku o tej samej nazwie zostanie utworzony nowy, a nie nadpisany,
+	- ścieżka pobierania plików domyślnie będzie ustawiona na katalog domowy ( w Windows to %userprofile% ),
+	- we wtyczce Portaudio dla Linux jako domyślne urządzenie zawsze będzie "default" jeżeli istnieje,
+	- tytuły z wrzuta.pl są już wyświetlane poprawnie,
+	- nazwa radia i tytuly ze strumiania OGG są już wyświetlane,
+	- nowa wtyczka umożliwiająca łatwe słuchania radia internetowego dostępna w oknie "Dodatki",
+
+Zmiany w QMPlay v1.53.06 :
+	- znów można pobierać z wrzuty,
+
+Zmiany w QMPlay v1.53.05 :
+	- poprawiona wtyczka effect_tst (jakość i możliwość echa w dźwięku 32bit),
+	- usunięta możliwość przeglądania YouTube,
+	- poprawione działanie wrzuta.pl,
+	- przycisk "Dodatki" zamiast "Zamknij" w oknie głównym,
+	- poprawione drobne błędy,
+
+Zmiany w QMPlay v1.53.04 :
+	- dodane sortowanie losowe,
+	- odtwarzanie kolejkowanych utworów, kiedy ustawione jest odtwarzanie losowe,
+	- poprawione pobieranie aktualizacji, przystosowane do sourceforge.net,
+
+Zmiany w QMPlay v1.53.03 :
+	- możliwość kolejkowania utworów ( klawisz "Q" ),
+	- drobne poprawki,
+
+Zmiany w QMPlay v1.53.02 :
+	- opcja "Rozmiar zaznaczonych plików" zlicza teraz także długości utworów,
+	- zmiana domyślnego serwera do aktualizacji na "http://zaps166.devilroot.pl/",
+	- poprawiłem działanie equalizera (na niektórych systemach nie działał od poprzedniej wersji),
+
+Zmiany w QMPlay v1.53.01 :
+	- poprawiona wydajność equalizera dzięki zastosowaniu kiss_fft,
+	- opcja "Dodawaj tylko znane typy plików" jest domyślnie zaznaczona,
+	- poprawiłem drobne błędy,
+	- poprawiony błąd porównywania plików z rozszerzeniami o różnej wielkości liter,
+
+Zmiany w QMPlay v1.52.10 :
+	- poprawki w QOut,
+	- poprawa wielu błędów,
+	- podczas pobierania aktualizacji nie trzeba już wybierać katalogu,
+	- użyta nowa biblioteka do edycji tagów -> taglib ( także obsługa edycji tagów w plikach OGG ),
+	- odczyt dźwięku z plików MP4 we wtyczce AAC,
+
+Zmiany w QMPlay v1.52.09 :
+	- wizualizacja i efekty nie są już opóźnione przy włączonym dodatkowym buforze,
+	- dodatkowy bufor jest teraz domyślnie włączony,
+	- poprawa działania QMPOut,
+	- dodałem opcja "Zamknij" do wizualizacji wykorzystujących OpenGL. Nowa opcja zamyka okno, a opcja "Wyłącz" wyłącza także ładowanie OpenGL'a ( okno nie będzie widoczne przy wyborze dokowania ),
+	- poprawiłem okno ustawiania kolorów,
+	- poprawa działania wtyczki OpenAL i PortAudio (nie powinno już być problemów np. z PulseAudio),
+	- poprawiłem wyświetlanie miniQMPlay,
+	- poprawiłem odświeżanie playlisty i wykrywanie typu strumienia internetowego, jeżeli wybrana już wtyczka nie istnieje,
+	- dodałem wykrywanie protokołów internetowych z biblioteki,
+	- dodałem nowy typ plugina: PlaylistPlugin, a także obsługę playlist M3U i PLS przeniosłem do nowego plugina,
+
+Zmiany w QMPlay v1.52.08 :
+	- poprawiłem błędy, że kursor myszki pozostawał zajęty: przy drugim dodaniu ścieżek audioCD do listy i rzadko przy przerwaniu dodawania plików z katalogu do listy,
+	- użyłem okienek dialogowych QT4 do wyboru plików,
+	- poprawiłem błąd wybierania pliku z polskimi znakami z okna dialogowego we wtyczce ID3,
+	- poprawiłem działanie opcji: "Dodawaj tylko znane typy plików",
+	- zmieniłem skróty klawiszowe do "Playlista->Powtarzanie utworu",
+	- dla systemu Windows dodałem nowe ikonki i dodałem parametr "--console" zamiast "QMPlay_cmd.exe",
+	- ikony na przyciskach są teraz wkompilowane do głównej biblioteki,
+	- zmieniłem wyświetlanie wersji QMPlay (teraz widać 1.52.08, a nie 1.52.8),
+	- zminiłem parametry funkcji init() w strukturze InputPlugin ( parametr "type" posyła się także w funkcji init() ),
+
+Zmiany w QMPlay v1.52.07 :
+	- możliwość otwarcia wyniku wyszukiwania z wtyczki "Music Browser" w domyślnej przeglądarce ( z menu podręcznego ),
+	- poprawiłem błąd, przez który mogły się nie wyświetlać ikonki okien,
+
+Zmiany w QMPlay v1.52.06 :
+	- lepsze przystosowanie QMPlay dla systemu MacOS,
+	- poprawne działanie programu na procesorach typu big endian,
+	- poprawiona wtyczka "Sound Generator",
+	- poprawiłem często występujący błąd "Błąd połączenia" w "Music Browser" ( także podczas pobierania plików i otwierania strumienia MP3 ),
+	- możliwość kopiowania plików z listy utworów przeciągając je lewym pryciskiem myszki itrzymając klawisz ( w środowisku X11 Meta a w pozostałych ALT ),
+	- okienko, pokazujące się podczas najechania myszką na utwór na liście nie będzie już wychodzić poza ekran,
+	- poprawiłem rzadko występujące wysypywanie się programu po nieudanym otwarciu strumienia MP3,
+	- program już nie sypie się, gdy do ścieżki do płyty CD poda się katalog ( tylko UNIX ),
+	- podczas dodawania ścieżek z płyty CD ustawienia się zastosują automatycznie,
+
+Zmiany w QMPlay v1.52.05 :
+	- poprawiłem drobne błędy,
+
+Zmiany w QMPlay v1.52.04 :
+	- poprawiłem drobne błędy,
+	- podczas ładowania np. playlisty kursor myszy zmienia się na zajęty,
+	- możliwość modyfikacji szerokości miniQMPlay,
+	- biblioteka libmpg123 i libresample nie są już ładowane dynamicznie poprzez moduł QLibrary,
+	- nowa wtyczka "Sound Generator", która zastępuje możliwość generowania częstotliwości we wtyczce MP3,
+
+Zmiany w QMPlay v1.52.03 :
+	- dodałem opcję "Automatycznie wypełniaj tło" dla wtyczki "Prosta wizualizacja",
+	- we wtyczce portaudio dodałem opcję ( tylko w Linux ) "Automatycznie zmień urządzenie dźwiękowe "default" na "surround" podczas odtwarzania dźwięku wielokanałowego",
+	- we wtyczce "Music Browser" czas pobierania jest pokazywany w minutach i godzinach,
+	- po pobraniu aktualizacji do katalogu z programem ( teraz domyślny ) i jej zainstalowaniu ( tylko otwarcie instalatora przez QMPlay ) po uruchomieniu programu zostanie automatycznie usunięty plik instalatora,
+
+Zmiany w QMPlay v1.52.02 :
+	- poprawiłem przechodzenie z / do pełnego ekranu,
+	- poprawiłem wyświetlanie miniQMPlay,
+	- dodałem wykrywanie typu pliku podczas filtrowania dodawanych wpisów playlisty do wątku, przez co program jest stabilniejszy,
+	- wtyczka "Music Browser" rozróżna już podczas pobierania z YouTube mp4 od flv,
+	- zablokowałem możliwość usuwania wpisów z listy podczas jej ładowania,
+
+Zmiany w QMPlay v1.52.01 :
+	- poprawiłem odczyt tekstu i wyświetlanie dźwięku 7.1 w "Prostej wizualizacji",
+	- dodałem obsługę YouTube w "Music Browser" ( chociaż program nie będzie obsługiwał odtwarzania ) i dodałem wątek do wyszukiwania, przez co program nie będzie się już wieszał podczas wyszukiwania,
+	- poprawiłem obsługę dźwięku wielokanałowego w systemie Linux ( wcześniej mylił kanały ),
+
+Zmiany w QMPlay v1.51.10 :
+	- dodałem opcję "Jeżeli znany typ" jako rozszerzenie opcji "Rozpoznawaj pliki po strukturze..." - rozpoznaje plik tylko wtedy, gdy plik nie ma rozszerzenia obsługiwanego przez QMPlay,
+	- poprawiłem odtwarzanie strumieni internetowych MP3,
+	- tytuł w miniQMPlay pokazuje już informacje np. o błędzie odtwarzania ( tak jak tytuł w oknie głównym ),
+	- dodałem możliwość kolejkowania utworów z wtyczki "Music Browser",
+
+Zmiany w QMPlay v1.51.09 :
+	- w paczce dla systemu Windows nie będzie już pliku QtXml4.dll, a podczas uaktualniania QMPlay zostanie usunięty,
+	- wtyczka obsługi wrzuty została usunięta, na jej miejsce pojawiła się nowa z obsługą wrzuty i 4shared.com -> "Music Browser",
+	- klawisz Delete usuwa piosenkę z listy a Shift+Delete usuwa wpis playlistę z listy,
+
+Zmiany w QMPlay v1.51.08 :
+	- poprawiłem obsługę 32bit dźwięku ( od wersji 1.51.06 32bit dźwięk był niskiej jakości przez głupi błąd ),
+	- poprawiłem dodawanie nieznanego pliku do listy, kiedy jest włączone filtrowanie,
+	- poprawiłem zamykanie okien informacji o muzyce,
+	- kmpilacja przy użyciu GCC 4.4 i QT 4.6 w systemie Windows,
+
+Zmiany w QMPlay v1.51.07 :
+	- w systemie Unix, wykorzystującym X11, można już wysyłać sygnały do QMPlay z lini poleceń bez włączonych X'ów,
+	- poprawiłem obsługę 24bit dźwięków ( problemy mogły być na niektórych konfiguracjach sprzętu po kompilacji z optymalizacją kodu ),
+	- do wtyczki RAW dodałem możliwość przeskoczenia pierwszych X bajtów z pliku,
+	- jeżeli muzyka nie jest odtwarzana to kopiowany jest tytuł muzyki z playlisty do schowka,
+	- jeżeli katalog wybrany do eksportu pliku nie istnieje, zostanie utworzony automatycznie,
+
+Zmiany w QMPlay v1.51.06 :
+	- poprawiłem kolejkowanie buforów dźwięku i poprawiłem czytelność kodu w QMPOut,
+	- poprawiłem sygnał "--alast" i posyłanie sygnału "--noplay" po awari QMPlay,
+	- w wizualizacjach wykorzystujących OpenGL dodałem możliwość ich wyłączenia tak, że nie będą używać OpenGL'a (wcześniej trzeba było wyłączać z listy i Przeładowywać wtyczki),
+	- po wyłączeniu / włączeniu wtyczke w opcjach wystarczy kliknąć "Zastosuj", nie trzeba już klikać "Przełąduj wtyczki",
+	- przy włączonej opcji "Czekaj na dane" we wtyczce mpg123 po zakończeniu odtwarzania muzyki np. z wrzuta.pl QMPlay nie zakańczał odtwarzania, trzeba było kliknąć "Stop" ręcznie - błąd poprawiony,
+	- poprawiłem problemy związane z uruchamianiem QMPlay z niekompletnym plikiem konfiguracyjnym,
+
+Zmiany w QMPlay v1.51.05 :
+	- dodałem możliwość wstawienia separatora do playlisty,
+	- dodałem listę urządzeń do wtyczki OpenAL,
+	- zmieniłem parametry funkcji QOut->Init(), możliwość wymuszenia napisu "Format",
+	- zastąpiłem wtyczkę "WAV" wtyczkami:
+		-> sndfile - odczyt plików np. wav, aiff ( wykorzystuje bibliotekę libSndfile ),
+		-> raw - surowy odczyt plików ( możliwość ustawienia częstotliwości próbkowania, itp. ),
+	- poprawiłem ochronę ładowania nieprawidłowych wtyczek ( np. z poprzedniej wersji QMPlay ) i plików językowych,
+	- poprawiłem chwilowe zawieszanie się programu podczas odczytu danych ID3 z niekompletnego/uszkodzonego pliku MP3, np. podczas ściągania,
+	- poprawiłem stabilność odtwarzania strumienia internetowego dla MP3, dodałem nowe opcje dla wtyczki mpg123,
+	- poprawiłem płynność zgłaśniania / przyciszania, itp.,
+	- usunąłem "Zezwól na clipping" i poprawiłem "wygładzanie" wzmocnionego dźwięku dla 32bit w equalizer,
+	- program przy włączonym automatycznym sprawdzaniu aktualizacji nie będzie pytał ponownie o tę samą aktualizację,
+
+Zmiany w QMPlay v1.51.04 :
+	- poprawiłem sypanie się QMPlay podczas wyszukiwania muzyki we wtyczce do obsługi wrzuty, gdy nie ma Internetu,
+	- zmieniłem konfigurację biblioteki QtCurve (lepiej widać podświetlanie wpisów menu),
+	- poprawiłem sypanie się QMPlay podczas pobierania aktualizacji, gdy okno jest ukryte,
+	- zmieniłem domyślną ścieżkę wybiarania katalogów do pobierania aktualizacji i pobierania muzyki z wrzuty,
+
+Zmiany w QMPlay v1.51.03 :
+	- przekompilowuje QMPlay przy użyciu nowej wersji biblioteki QT4 - 4.5.3,
+	- podczas pierwszego uruchomienia QMPlay domyślnie do "okienka" ładuje się pierwsza załączona wtyczka wizualizacji ( "Prosta wizualizacja" ),
+	- dodałem pytanie czy włączyć wtyczkę OpenAL w systemie Windows. W pozostałych systemach jest ona domyślnie wyłączona,
+	- przerobiłem wtyczkę "Prosta wizualizacja" z OpenGL na QPainter i poprawiłem obsługę napisów,
+	- poprawiłem odczyt informacji o albumie w plikach OGG Vorbis ( literówka w kodzie, napisałem "albun" zamiast "album" :D ) i rozszerzyłem okienko informacji o muzyce,
+
+Zmiany w QMPlay v1.51.02 :
+	- zmieniłem sposób odczytu sygnałów ( teraz jest szybszy ),
+	- dodałem możliwość automatycznego sprawdzania aktualizacji,
+	- poprawiłem wtyczkę wrzuta.pl,
+	- uaktualniłem bibliotekę QtCurve,
+
+Zmiany w QMPlay v1.51.01 :
+	- poprawiłem wtyczkę obsługi strony: wrzuta.pl,
+	- dodałem możliwość zmiany kodowania tekstu w AudioCD,
+	- zamiana QMP.log na QMPlay.log,
+	- poprawiłem jakość equalizera, od teraz opcja "Zezwalaj na clipping" jest domyślna,
+	- możliwość kopiowania tytułu muzyki do schowka,
+
+Zmiany w QMPlay v1.50.10 :
+	- dodałem changelog do programu,
+	- wprowadziłem opcję: "Dodawaj nowe wpisy na końcu playlisty",
+	- program sprawdza, czy playlista jest otwarta tylko wtedy, gdy podczas pracy programu zostało pokazane okno główne,
+	- drobna zmiana podczas uruchamiania QMPlay z miniQMPlay zamiast okna głównego,
+	- poprawiony odczyt MP3 z Internetu ( odczyt ID3 jeżeli istnieje, rozpoznawanie czy strumień internetowy ma określoną wielkość ),
+	- poprawa błedu: jeśli jest zaznaczone: "Zakończ eksport do pliku przy przełączaniu muzyki" funkcja czyszczenia bufora nie była wykonywana,
+	- poprawa czyszczenia bufora podczas przełączania muzyki w OpenAL,
+	- usunięcie możliwości wystąpienia przepełnienia bufora podczas odświeżania wpisu na playliście ( funkcja updateCurrPlistEntry() ),
+	- dodałem obsługę wrzuta.pl,
+
+---
+
+Niektóre zmiany i poprawki w QMPlay v1.50.09 :
+	- stabilniejsze przewijanie muzyki w plikach MP3,
+	- możliwość przewijania piosenki o okr. ilość sekund,
+	- zamiana klawiszy ( / na [ ; * na ] ),
+
+Niektóre zmiany i poprawki w QMPlay v1.50.08 :
+	- nowa wtyczka dla wyjścia dźwięku napisana przy użyciu biblioteki OpenAL,
+	- poprawa drobnych błędów,
+	- wyrzuciłem z paczki OutputPlugin AO (dostępny w paczce z kodem źródłowym),
+
+Niektóre zmiany i poprawki w QMPlay v1.50.07 :
+	- nowa nazwa (QMPlay),
+	- nowy parametr --sendkey (więcej w opisie QMP),
+	- możliwość sortowania wpisów na liście,
+	- poprawa drobnych błędów,
+
+Niektóre zmiany i poprawki w QMP v1.50.06 :
+	- dodałem pełny ekran we wtyczkach wizualizacji,
+	- dodałem możliwość wyszukiwania muzyki we wszystkich załadowanych playlistach,
+	- poprawiłem błąd, który pokazywał okno główne w lewym górnym rogu ekranu po załadowaniu QMP z ukrytym oknem głównym w systemie Windows,
+
+Niektóre zmiany i poprawki w QMP v1.50.05 :
+	- equalizer i wtyczka "Prosta wizualizacja" obsługują już więcej niż 2 kanały,
+	- dodałem nową wtyczkę "Resample plugin", która zmienia częstotliwość próbkowania dźwięku,
+	- zmieniłem wyszukiwarkę wpisów w liście (teraz jest pole edycji na dole okna),
+	- dodałem przycisk "M", który zamyka okno główne i otwiera miniQMP,
+	- poprawiłem działanie skrótów klawiszowych w oknie playlisty, kiedy nie jest podłączone do głównego okna,
+	- zmieniłem "Zmiksuj przed ustawieniem głośności" na "Ustaw głośność przed efektami",
+
+Niektóre zmiany i poprawki w QMP v1.50.04 :
+	- poprawiony odczyt aiff (złe obliczanie długości),
+	- dodałem styl QtCurve jako domyślny,
+	- poprawiłem stabilność i wiele drobnych błędów,
+
+Niektóre zmiany i poprawki w QMP v1.50.03 :
+	- poprawiony odczyt aiff,
+	- dodałem możliwość odczytu szybkości CPU,
+	- podczas przełączania muzyki dźwięk urządzenie nie zamyka się,
+
+Niektóre zmiany i poprawki w QMP v1.50.02 :
+	- po zamknięciu okna edycji ID3 odświeżany jest wpis na liście,
+	- w miniQMP pokazuje się obrazek taki jak na playliście,
+	- poprawiony błąd w "okienku" w oknie głównym,
+
+Niektóre zmiany i poprawki w QMP v1.50.01 :
+	- poprawiny błąd dzielenia przez 0 po zakończeniu odtwarzania AAC,
+	- dodana możliwość wyłączenia odczytu ID3 dla wpisów playlisty dla MP3,
+	- lekko poprawione działanie DirectSound,
+	- dodatkowy bufor QMP może być używany tylko gdy wymaga tego InputPlugin,
+	- poprawione drobne błędy, nowa muzyka po instalacji w systemie Windows,
+
+Niektóre zmiany i poprawki w QMP v1.49.09 :
+	- poprawione błąd w odczycie AAC (przebełnienie bufora),
+	- dodanie możliwości edycji ID3,
+	- odczyt obrazka muzyki i rozszerzenie informacji o muzyce,
+
+Niektóre zmiany i poprawki w QMP v1.49.08 :
+	- dodałem dodatkowy bufor,
+	- poprawiłem błędy przy wykrywaniu odpowiedniej wtyczki dla strumienia internetowego,
+	- dodałem więcej informacji o muzyce dla plików OGG i dodałem pasek postępu odtwarzania muzyki w okienku informacji o muzyce z playlisty,
+
+Niektóre zmiany i poprawki w QMP v1.49.07 :
+	- dodałem możliwość zmiany koloru przycisku suwaków,
+	- informacje o muzyce pojawia się po 2 sek. od wskazania myszką wpisu na playliście,
+	- dodanie ikon wtyczek,
+	- miniQMP (dostępne z menu podręcznego tray'a),
+	- poprawa okna informacji dla AudioCD,
+	- dodałem możliwość resetowania koloru,
+	- dodałem filtr plików dodawanych do playlisty,
+
+Niektóre zmiany i poprawki w QMP v1.49.06 :
+	- poprawiona stabilność (czyszczenie listy podczas jej ładowania, zamykanie aplikacji z wizualizacją w "okienku, drag & drop podczas ładowania listy"),
+	- możliwość doczepienia okien do okna głównego,
+	- zmieniona struktura wtyczek,
+	- zmienione okno z wybieraniem opcji wtyczek,
+	- usunąłem przepełnienie bufora we wtyczce "qmp_plugin_func_associate.dll",
+
+Niektóre zmiany i poprawki w QMP v1.49.05 :
+	- poprawione exportowanie do wav,
+	- zmienione ładowanie wtyczek (jeszcze będą zmiany),
+	- inne działanie i ładowanie playlisty (np. drag and drop),
+	- poprawione wybieranie katalogu w QMPExport,
+	- lepsze odświeżanie tytułu z CDDB i ze strumienia internetowego podczas "Play",
+
+Niektóre zmiany i poprawki w QMP v1.49.04 :
+	- poprawione scrollbar w opcjach,
+	- możliwość ustawiania kolorów,
+	- możliwość dodawania katalogu z menu,
+	- dodałem wcześniej usunięty przycisk "Informacje o muzyce",
+	- opcje pokazywania playlisty są dostępne teraz w menu kontekstowym przycisku "Playlista",
+	- w opcjach QMPOut mozna włączyć powiadamianie o zmienie tytułu,
+	- możliwość dodawania katalogu z menu podręcznego katalogu / dysku w Windows ( zobacz w Odtwarzacz->Inne funkcje->Skojarzenia plików ),
+
+Niektóre zmiany i poprawki w QMP v1.49.03 :
+	- nowy układ opcji,
+	- poprawione błędy związane z rozpoznawaniem plików MP3,
+	- poprawione błędy związane z odtwarzaniem strumieni internetowych,
+	- możliwość ograniczenia szybkości pobierania plików z Internetu,
+	- możliwość pobierania aktualizacji QMP,
+	- eksport muzyki można teraz rozpocząć i zakończyć w dowolnym miejscu odtwarzania,
+
+Niektóre zmiany i poprawki w QMP v1.49.02 :
+	- zmieniłem bibliotekę odczytu AudioCD (cdio),
+	- dodałem obsługę CD-TEXT i CDDB,
+	- dodałem prosty instalator,
+	- poprawiłem wiele drobnych błędów,
+	- zamieniłem przycisk "Odśwież" na "Akcja" na playliście (można zatrzymać ładowanie listy),
+	- wykres w Equalizer nie jest już rysowany w OpenGL tylko przez QPainter,
+	- poprawiłem miksowanie do 2 kanałów w QOut,
+	- poprawiłem problem uniemożliwiający odtwarzanie więcej niż stereo przy użyciu DirectSound w Windows,
+	- poprawiłem niektóre problemy związane z nagrywaniem,
+
+Niektóre zmiany i poprawki w QMP v1.49.01 :
+	- możliwość odtwarzania AudioCD,
+	- rozmiar bufora kontrolowany z QMPOut,
+	- wymuszanie odtwarzania w różnych trybach (8bit, mono, etc...),
+	- zamiana przycisku "Informacje" na "Equalizer" w oknie głównym,
+	- Płynne wyciszanie podczas zatrzymywania muzyki i płynne pogłaśnianie podczas wznowienia odtwarzania,
+	- większe możliwości językowe,
+	- przycisk "Pause" może wznowić odtwarzanie,
+	- więcej sygnałów do posyłania do QMP (np. zarządzanie listą playlist),
+	- możliwość powiększenia bufora z poziomu wtyczki (np. aby zrobić efekt wolnego odtwarzania),
+	- nowa wizualizacja - XMMS OpenGL Spectrum,
+	- stabilniejsza obsługa radia internetowego,
+
+Niektóre zmiany i poprawki w QMP v1.48 :
+	- dodałem obsługę formatu AAC,
+	- wtyczki: AAC, OGG i MP3 pozwalają otworzyć strumień internetowy,
+	- ładowanie playlisty m3u i pls w wątku,
+	- sortowanie pluginów,
+	- możliwość sprawdzenia aktualizacji programu,
+	- możliwość rozpoznawania pliku po strukturze a nie rozszerzeniu,
+	- usunąłem opcję wyłączającą zapis pogrubionych wpisów na liście,
+	- biblioteka libqmp_lib może posłać aktualną playlistę i pbsługiwane rozszerzenia plików,
+	- nazwa pliku podczas eksportu może być tytułem utworu lub nazwą pliku utworu,
+	- dodałem możliwość posyłania parametrów do protokołu plugin://,
+	- nowy parametr: -oq - zamyka lub otwiera QMP (działa w tle w systemie Linux),
+	- dodałem możliwość wywołania "chmurki" w tray'u poprzez plugin,
+	- usunąłem błąd związany z czyszczeniem pamięci we wtyczce MP3,
+
+Niektóre zmiany i poprawki w QMP v1.47 :
+	- poprawiłem błąd związany z kopiowaniem plików z QMP (nadpisywanie istniejących plików i pamiętanie katalogu, do którego plik został zapisany),
+	- zaznaczenie (pogrubienie) nie traci się po dodaniu plików do listy,
+	- dodałem możliwość odtwarzania losowego na zaznaczonych utworach,
+	- dodałem drugi kolor do pasków w prostej wizualizacji,
+	- poprawiłem wczytywanie playlisty *.PLS i *.M3U,
+	- poprawiłem czyszczenie efektów dźwiękowych przy przełączaniu muzyki,
+
+Niektóre zmiany i poprawki w QMP v1.46 :
+	- program się nie zawiesza przy ustawieniach wizualizacji FFT: 1024 i pełne widmo,
+	- poprawione drobne błędy z playlistą,
+	- equalizer jest trochę wydajniejszy i daje dużo lepszą jakość dźwięku,
+	- przy wyłączonej wizualizacji w oknie gównym pojawia się przycisk z ikonką QMP,
+	- poprawiona stabilność przy przewijaniu muzyki MP3 i OGG,
+
+Niektóre zmiany i poprawki w QMP v1.45 :
+	- poprawione wczytywanie playlist *.pls (bardzo wolny odczyt długich list) i kodowanie polskich znaków dla *.m3u,
+	- poprawiony drag and drop ze ścieżki sieciowej w Windows,
+	- dodanie nowego efektu,
+	- kiedy okno wizualizacji ma wys. i szer. < 1 nie znika już,
+	- zastosowywanie częstotliwości kanałów od 2 do 6 przy ich zmianie,
+	- podczas dodawania całego katalogu dodane playlisty będą juz od razu widoczne,
+	- wyrzucony ostatni chceckbox w oknie QMPOut w Windows (już nie powinno być z tym problemów),
+	- i inne drobne zmiany,
+
+Niektóre zmiany i poprawki w QMP v1.44 :
+	- możliwość zmiany priorytetu wątku odtwarzającego,
+	- szybsze odczytywanie playlist *.m3u i *.pls,
+	- zmiana w sygnałach QMP - zobacz instrukcję lub "qmp -h",
+	- poprawka przy zamykaniu QMP z traya i późniejszym odczytem geometri okna,
+	- poprawka wielu operacji na playliście,
+	- możliwość uaktualniania wpisu w playliście po rozpoączeciu odtwarzania go,
+	- możliwość zapisu pogrubień do playlisty *.qplst,
+	- zmiana okienka z opcjami QMP,

@@ -1,0 +1,63 @@
+<plist><dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>mp3</string>
+				<string>ogg</string>
+				<string>wav</string>
+				<string>aif</string>
+				<string>aiff</string>
+				<string>it</string>
+				<string>xm</string>
+				<string>s3m</string>
+				<string>669</string>
+				<string>mod</string>
+				<string>stm</string>
+				<string>j2b</string>
+				<string>mtm</string>
+				<string>aac</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>QMPlayFile.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>QMPlay file</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>qplst</string>
+				<string>pls</string>
+				<string>m3u</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>QMPlayList.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>QMPlay playlist</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>QMPlay</string>
+	<key>CFBundleIconFile</key>
+	<string>QMPlay.icns</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLIconFile</key>
+			<string>generic</string>
+			<key>CFBundleURLName</key>
+			<string>http url</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>http</string>
+			</array>
+		</dict>
+	</array>
+</dict></plist>

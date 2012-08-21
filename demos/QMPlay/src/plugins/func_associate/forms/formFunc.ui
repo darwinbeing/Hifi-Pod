@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_1</class>
+ <widget class="QWidget" name="Form_1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>324</width>
+    <height>267</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Skojarzenia plików dla Windows</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff/>
+   </iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>2</number>
+   </property>
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <item row="0" column="0" colspan="2">
+    <widget class="QCheckBox" name="onRunB">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Skojarz przy każdym uruchomieniu QMP</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QListWidget" name="extsList">
+     <property name="isWrapping" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="resizeMode">
+      <enum>QListView::Adjust</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>320</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QPushButton" name="clrB">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>60</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Czyść listę</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="selAllB">
+      <property name="geometry">
+       <rect>
+        <x>155</x>
+        <y>10</y>
+        <width>155</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Zaznacz wszystko</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="revSelB">
+      <property name="geometry">
+       <rect>
+        <x>155</x>
+        <y>40</y>
+        <width>155</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Odwróć zaznaczenie</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delB">
+      <property name="geometry">
+       <rect>
+        <x>235</x>
+        <y>70</y>
+        <width>75</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Usuń</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="getExtsB">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>10</y>
+        <width>141</width>
+        <height>44</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pobierz obsługiwane
+rezszerzenia</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addB">
+      <property name="geometry">
+       <rect>
+        <x>155</x>
+        <y>70</y>
+        <width>75</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dodaj</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QLineEdit" name="extsE"/>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QPushButton" name="applyB">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Zastosuj</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>onRunB</tabstop>
+  <tabstop>extsList</tabstop>
+  <tabstop>getExtsB</tabstop>
+  <tabstop>clrB</tabstop>
+  <tabstop>selAllB</tabstop>
+  <tabstop>revSelB</tabstop>
+  <tabstop>addB</tabstop>
+  <tabstop>delB</tabstop>
+  <tabstop>extsE</tabstop>
+  <tabstop>applyB</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

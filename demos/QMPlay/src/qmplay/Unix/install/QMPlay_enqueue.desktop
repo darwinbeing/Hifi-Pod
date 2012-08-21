@@ -1,0 +1,10 @@
+[Desktop Entry]
+Exec=qmplay -a
+Icon=/usr/share/pixmaps/QMPlay.png
+Name=Enqueue in QMPlay
+Name[pl]=Kolejkuj w QMPlay
+StartupNotify=false
+Type=Application
+Categories=Qt;AudioVideo;Music;Player;
+MimeType=application/x-ogg;application/ogg;audio/ogg;audio/x-vorbis+ogg;audio/mpeg;audio/m3u;audio/x-scpls;audio/x-mod;audio/x-s3m;audio/x-it;audio/x-wav;audio/aac;audio/qplst;audio/x-xm;audio/flac;audio/x-flac;audio/j2b;audio/umx;
+NoDisplay=true

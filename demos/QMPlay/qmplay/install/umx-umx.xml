@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="audio/umx">
+  <comment>Unreal Music Package</comment>
+  <glob pattern="*.UMX"/>
+  <glob pattern="*.umx"/>
+ </mime-type>
+</mime-info>

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"
+
+Threads=1
+if [ ! -e $1 ]; then
+	Threads=$1
+else
+	if [ `uname` == "Linux" ]; then
+		Threads=`cat /proc/cpuinfo | grep processor | awk '{a++} END {print a}'`
+	fi
+fi
+
+qmake && time make -j$Threads
+
+if [ $? != 0 ]; then
+	exit 1
+fi
+
+cp -R src/qmplay/Unix/install qmplay
+cp src/qmp_lib/icons/play_64x64.png qmplay/install/QMPlay.png

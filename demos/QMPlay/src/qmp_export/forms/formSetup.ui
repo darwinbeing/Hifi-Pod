@@ -1,0 +1,104 @@
+<ui version="4.0" >
+ <class>Form3</class>
+ <widget class="QWidget" name="Form3" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>421</width>
+    <height>144</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Ustawienia</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset>
+    <normaloff/>
+   </iconset>
+  </property>
+  <widget class="QPushButton" name="ApplyB" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>401</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Zastosuj</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>271</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Path to file export:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="fPthE" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="browseB" >
+   <property name="geometry" >
+    <rect>
+     <x>330</x>
+     <y>30</y>
+     <width>81</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="rawB" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>291</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Export to RAW file (without header)</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="schB" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>291</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Save 8bit unsigned char to signed char</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>fPthE</tabstop>
+  <tabstop>rawB</tabstop>
+  <tabstop>browseB</tabstop>
+  <tabstop>ApplyB</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"
+
+export QMAKESPEC=macx-g++
+
+Threads=1
+if [ ! -e $1 ]; then
+	Threads=$1
+fi
+
+qmake && time make -j$Threads
+
+if [ $? != 0 ]; then
+	exit 1
+fi
+
+cd qmplay
+mv qmplay.app QMPlay.app
+cp -R colors QMPlay.app/Contents/MacOS
+cp -R lang QMPlay.app/Contents/MacOS
+cp -R lib QMPlay.app/Contents/MacOS
+cp -R plugins QMPlay.app/Contents/MacOS
+cp -R styles QMPlay.app/Contents/MacOS
+cp ChangeLog_QMPlay.txt QMPlay.app/Contents/MacOS
+cp QMPlay_opis.pdf QMPlay.app/Contents/MacOS
+cp COPYING QMPlay.app/Contents/MacOS
+cp ../src/qmplay/MacOS/*.icns QMPlay.app/Contents/Resources
+cp ../src/qmplay/MacOS/QMPlay.plist QMPlay.app/Contents/Info.plist
