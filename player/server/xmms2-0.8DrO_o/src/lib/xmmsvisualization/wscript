@@ -1,0 +1,30 @@
+# encoding: utf-8
+#
+# WAF build scripts for XMMS2
+# Copyright (C) 2006-2011 XMMS2 Team
+#
+
+def build(bld):
+    source = """
+    timestamp.c
+    udp.c
+    """.split()
+
+    bld(features = 'c cstlib',
+        target = 'xmmsvisualization',
+        source = source,
+        includes = '. ../../.. ../../include',
+        uselib = 'math',
+        install_path = None
+        )
+
+
+def configure(conf):
+    # Check for the modf function in the math lib
+    conf.check_cc(function_name="modf", header_name="math.h",
+            lib="m", uselib_store="math")
+    return True
+
+
+def options(opt):
+    pass

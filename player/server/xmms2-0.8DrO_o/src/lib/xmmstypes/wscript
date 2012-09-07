@@ -1,0 +1,28 @@
+# encoding: utf-8
+#
+# WAF build scripts for XMMS2
+# Copyright (C) 2006-2011 XMMS2 Team
+#
+
+def build(bld):
+    source = """
+    coll.c
+    value.c
+    xlist.c
+    value_serialize.c
+    """.split()
+
+    bld(features = 'c cstlib',
+        target = 'xmmstypes',
+        source = source,
+        includes = '. ../../.. ../../include ../../includepriv',
+        install_path = None
+        )
+
+
+def configure(conf):
+    return True
+
+
+def options(opt):
+    pass

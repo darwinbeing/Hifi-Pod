@@ -1,0 +1,21 @@
+import Options
+
+def build(bld):
+    bld(features = 'c cprogram',
+        target = 'xmms2-launcher',
+        source = ['xmms2-launcher.c'],
+        includes = '../../.. ../../include',
+        uselib = 'glib2',
+        use = 'xmmsutils'
+        )
+
+    bld(features = 'man',
+        source = 'xmms2-launcher.1'
+        )
+
+def configure(conf):
+    if Options.platform == 'win32':
+        conf.fatal("Not supported on Windows")
+
+def options(opt):
+    pass

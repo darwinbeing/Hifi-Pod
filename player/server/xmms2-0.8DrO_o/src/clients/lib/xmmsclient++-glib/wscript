@@ -1,0 +1,21 @@
+from waftools import tool
+def build(bld):
+    obj = bld(features = 'cxx cxxshlib',
+        target = 'xmmsclient++-glib',
+        source = 'xmmsclient++-glib.cpp',
+        uselib = 'glib2',
+        use = 'xmmsclient xmmsclient-glib',
+        includes = '../../../.. ../../../include ../../../includepriv',
+        vnum = '1.0.0'
+        )
+
+    tool.add_install_flag(bld, obj)
+
+def configure(conf):
+    if not conf.env.CXX:
+        conf.fatal("No C++ compiler found")
+    conf.env.XMMS_PKGCONF_FILES.append(
+            ('xmms2-client-cpp-glib', '-lxmmsclient-glib -lxmmsclient++-glib'))
+
+def options(env):
+    pass

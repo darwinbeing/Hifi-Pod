@@ -1,0 +1,42 @@
+# encoding: utf-8
+#
+# WAF build scripts for XMMS2
+# Copyright (C) 2006-2011 XMMS2 Team
+#
+
+from waflib import Options, Logs, Errors
+
+def build(bld):
+    source = """
+    strlist.c
+    utils.c
+    """.split()
+    if bld.env.util_impl == 'win32':
+        source.extend(['utils_win32.c'])
+    else:
+        source.extend(['utils_unix.c'])
+
+    bld(features = 'c cstlib',
+        target = 'xmmsutils',
+        source = source,
+        includes = '. ../../.. ../../include',
+        uselib = 'rt',
+        install_path = None
+        )
+
+
+def configure(conf):
+    if Options.platform == 'win32':
+        conf.env.util_impl = 'win32'
+    else:
+        conf.env.util_impl = 'unix'
+        try:
+            conf.check_cc(function_name="nanosleep", header_name="time.h")
+        except Errors.ConfigurationError:
+            conf.check_cc(function_name="nanosleep", header_name="time.h",
+                    lib="rt", uselib_store="rt")
+    return True
+
+
+def options(opt):
+    pass

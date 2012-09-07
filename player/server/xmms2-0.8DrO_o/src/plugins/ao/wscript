@@ -1,0 +1,7 @@
+from waftools.plugin import plugin
+
+def plugin_configure(conf):
+    conf.check_cfg(package="ao", uselib_store="ao", args="--cflags --libs")
+
+configure, build = plugin("ao", configure=plugin_configure,
+                          libs=["ao"], output_prio=23)

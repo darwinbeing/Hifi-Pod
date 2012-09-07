@@ -1,0 +1,63 @@
+#encoding: utf-8
+
+types_suite = """
+xmmsv/t_xmmsv.c
+xmmsv/t_xmmsv_serialization.c
+xmmsv/t_coll.c
+""".split()
+
+server_suite = """
+server/t_streamtype.c
+""".split()
+
+test_xmmstypes_src = """
+runner/main.c
+runner/valgrind.c
+""".split() + types_suite
+
+test_server_src = """
+runner/main.c
+runner/valgrind.c
+../src/xmms/streamtype.c
+../src/xmms/object.c
+""".split() + server_suite
+
+
+def configure(conf):
+    conf.load("unittest", tooldir="waftools")
+
+    conf.check_cc(header_name="CUnit/CUnit.h")
+    conf.check_cc(lib="cunit", uselib_store="cunit")
+    conf.check_cc(lib="ncurses", uselib_store="ncurses", mandatory=False)
+
+    code = """
+           static void T (void) __attribute__ ((constructor (220)));
+           static void T (void) {};
+    """
+    conf.check_cc(fragment=code, type="c", msg="Checking for constructor attribute")
+
+    conf.check_cfg(package='valgrind', uselib_store='valgrind', args='--cflags', mandatory=False)
+
+
+def build(bld):
+    bld(features = 'c cprogram test',
+        target = 'test_xmmstypes',
+        source = test_xmmstypes_src,
+        includes = '. .. runner ../src ../src/include',
+        use = 'xmmstypes',
+        uselib = 'cunit ncurses valgrind DISABLE_WRITESTRINGS',
+        install_path = None
+        )
+
+    bld(features = 'c cprogram test',
+        target = 'test_server',
+        source = test_server_src,
+        includes = '. .. runner ../src ../src/includepriv ../src/include',
+        use = 'xmmstypes',
+        uselib = 'cunit ncurses valgrind glib2 gthread2 DISABLE_WRITESTRINGS',
+        install_path = None
+        )
+
+
+def options(o):
+    o.load("unittest", tooldir="waftools")

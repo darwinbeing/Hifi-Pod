@@ -1,0 +1,13 @@
+from waflib import Errors
+from waftools.plugin import plugin
+
+def plugin_configure(conf):
+    conf.check_cc(header_name="sys/soundcard.h")
+    try:
+        conf.check_cc(lib='ossaudio', mandatory=0, uselib_store='ossaudio')
+        conf.define('OSS_DEFAULT_DEVICE', '/dev/audio')
+    except Errors.ConfigurationError:
+        conf.define('OSS_DEFAULT_DEVICE', '/dev/dsp')
+
+configure, build = plugin("oss", configure=plugin_configure,
+        libs=["oss", "ossaudio"], output_prio=35)

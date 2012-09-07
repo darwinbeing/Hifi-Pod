@@ -1,0 +1,7 @@
+from waftools.plugin import plugin
+
+def plugin_configure(conf):
+    conf.check_cfg(package="libxml-2.0", uselib_store="xml2",
+            args="--cflags --libs")
+
+configure, build = plugin('xspf', configure=plugin_configure, libs=["xml2"])

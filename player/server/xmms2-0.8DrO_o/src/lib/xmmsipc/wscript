@@ -1,0 +1,32 @@
+# encoding: utf-8
+#
+# WAF build scripts for XMMS2
+# Copyright (C) 2006-2011 XMMS2 Team
+#
+
+def build(bld):
+    source = """
+    msg.c
+    socket_tcp.c
+    transport.c
+    url.c
+    """.split()
+
+    if bld.env.socket_impl == 'wsock32':
+        source.extend(['transport_win.c'])
+    else:
+        source.extend('socket_unix.c transport_unix.c'.split())
+
+    bld(features = 'c cstlib',
+        target = 'xmmsipc',
+        source = source,
+        includes = '. ../../.. ../../include ../../includepriv',
+        install_path = None
+        )
+
+
+def configure(conf):
+    return True
+
+def options(opt):
+    pass

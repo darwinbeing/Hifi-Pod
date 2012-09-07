@@ -1,0 +1,8 @@
+from waftools.plugin import plugin
+
+def plugin_configure(conf):
+    conf.check_cc(header_name="libsmbclient.h")
+    conf.check(lib="smbclient", uselib_store="smbclient")
+
+configure, build = plugin("samba", configure=plugin_configure,
+        libs=["smbclient"])
