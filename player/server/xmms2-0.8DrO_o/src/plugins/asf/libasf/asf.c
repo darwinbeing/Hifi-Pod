@@ -204,11 +204,20 @@ asf_get_packet(asf_file_t *file, asf_packet_t *packet)
 
 	if (!file || !packet)
 		return ASF_ERROR_INTERNAL;
-
-	if (file->packet >= file->data_packets_count) {
+	
+	//Advanced Systems Format (ASF) Specification
+	//Revision 01.20.06
+	//Microsoft Corporation
+	//January 2012
+	//Data Packets Count 
+	//Specifies the number of Data Packet entries that exist within the Data Object. 
+	//The value of this field is invalid if the Broadcast Flag bit in the Flags field is set to 1.
+	if(!asf_is_broadcast(file)) {
+	    if (file->packet >= file->data_packets_count) {
 		return 0;
+	    }
 	}
-
+	
 	tmp = asf_data_get_packet(packet, file);
 	if (tmp < 0) {
 		return tmp;
