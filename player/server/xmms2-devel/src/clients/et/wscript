@@ -1,0 +1,34 @@
+from waflib import Utils, Options
+
+def build(bld):
+    bld(features = 'c cprogram',
+        target = 'xmms2-et',
+        source = ['xmms2-et.c'],
+        includes = '. ../../.. ../../include',
+        uselib = 'glib2 socket resolv',
+        use = 'xmmsclient-glib xmmsclient'
+        )
+
+    bld(features = 'subst',
+        target = 'xmms2-et-launcher.sh',
+        source = 'xmms2-et-launcher.sh.in',
+        install_path = '${SCRIPTDIR}',
+        chmod = Utils.O755,
+        PRG_PATH = bld.env.BINDIR
+        )
+
+    bld(features = 'man',
+        source = 'xmms2-et.1'
+        )
+
+
+def configure(conf):
+    if Options.platform == "win32":
+        conf.fatal("Not supported on Windows")
+    elif Options.platform == "sunos":
+        conf.check_cc(lib="resolv", uselib_store="resolv", mandatory=True)
+    return True
+
+
+def options(opt):
+    pass

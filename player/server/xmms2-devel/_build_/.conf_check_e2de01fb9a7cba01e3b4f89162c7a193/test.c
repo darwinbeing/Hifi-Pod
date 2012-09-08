@@ -1,0 +1,5 @@
+#include <avcodec.h>
+
+int main() {
+	return 0;
+}

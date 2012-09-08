@@ -1,0 +1,6 @@
+from waftools.plugin import plugin
+
+def plugin_configure(conf):
+    conf.check_cc(lib="m", uselib_store="math")
+
+configure, build = plugin("karaoke", configure=plugin_configure, libs=["math"])

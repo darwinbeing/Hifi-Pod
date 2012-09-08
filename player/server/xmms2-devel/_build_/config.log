@@ -1,0 +1,1796 @@
+# project xmms2 configured on Sat Sep  8 19:44:13 2012 by
+# waf 1.6.7 (abi 98, python 20605f0 on linux2)
+# using ./waf configure --boost-includes=/root/boost_1_51_0 --boost-libs=/root/boost_1_51_0/stage --boost-static --boost-mt --prefix=/usr
+#
+----------------------------------------
+Setting top to
+/root/Hifi-Pod/player/server/xmms2-devel
+----------------------------------------
+Setting out to
+/root/Hifi-Pod/player/server/xmms2-devel/_build_
+----------------------------------------
+Platform code for posix
+ok
+----------------------------------------
+Checking for program gcc,cc
+arm-arago-linux-gnueabi-gcc
+find program=['gcc', 'cc'] paths='' var='CC' -> 'arm-arago-linux-gnueabi-gcc'
+----------------------------------------
+Checking for program ar
+arm-arago-linux-gnueabi-ar
+find program=['ar'] paths='' var='AR' -> 'arm-arago-linux-gnueabi-ar'
+----------------------------------------
+Checking for program g++,c++
+arm-arago-linux-gnueabi-gcc
+find program=['g++', 'c++'] paths='' var='CXX' -> 'arm-arago-linux-gnueabi-gcc'
+(tool ar is already loaded, skipping)
+----------------------------------------
+git commit id
+6e6a9635
+----------------------------------------
+uncommited changed
+yes
+----------------------------------------------------------
+Checking for compiler flags -Werror=unknown-warning-option
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_c6ad7a7c5f619965609a86209392d939/test.c -> _build_/.conf_check_c6ad7a7c5f619965609a86209392d939/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Werror=unknown-warning-option', '../test.c', '-c', '-o', 'test.c.1.o']
+err: cc1: error: -Werror=unknown-warning-option: No option -Wunknown-warning-option
+
+from /root/Hifi-Pod/player/server/xmms2-devel: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 142618700: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Werror=unknown-warning-option', '../test.c', '-c', '-o', 'test.c.1.o']
+
+no
+from /root/Hifi-Pod/player/server/xmms2-devel: The configuration failed
+----------------------------------------------------------
+Checking for compiler flags -Werror=unknown-warning-option
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: _build_/.conf_check_101f5aa13fed443240246b8125f9df8a/test.cpp -> _build_/.conf_check_101f5aa13fed443240246b8125f9df8a/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Werror=unknown-warning-option', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: cc1plus: error: -Werror=unknown-warning-option: No option -Wunknown-warning-option
+
+from /root/Hifi-Pod/player/server/xmms2-devel: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 142754124: cxx test.cpp -> test.cpp.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Werror=unknown-warning-option', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+no
+from /root/Hifi-Pod/player/server/xmms2-devel: The configuration failed
+----------------------------------------------------------
+Checking for compiler flags -Wall
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_3f18001eae7474ab93464ce5103ea200/test.c -> _build_/.conf_check_3f18001eae7474ab93464ce5103ea200/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: _build_/.conf_check_3f18001eae7474ab93464ce5103ea200/testbuild/test.c.1.o -> _build_/.conf_check_3f18001eae7474ab93464ce5103ea200/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_3f18001eae7474ab93464ce5103ea200/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wempty-body
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_c2100bcf10ae334d4263dff9c8eaccfb/test.c -> _build_/.conf_check_c2100bcf10ae334d4263dff9c8eaccfb/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: _build_/.conf_check_c2100bcf10ae334d4263dff9c8eaccfb/testbuild/test.c.1.o -> _build_/.conf_check_c2100bcf10ae334d4263dff9c8eaccfb/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_c2100bcf10ae334d4263dff9c8eaccfb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wformat=2
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_99443a47dcf5d358fa9a308dc8e64c55/test.c -> _build_/.conf_check_99443a47dcf5d358fa9a308dc8e64c55/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: _build_/.conf_check_99443a47dcf5d358fa9a308dc8e64c55/testbuild/test.c.1.o -> _build_/.conf_check_99443a47dcf5d358fa9a308dc8e64c55/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_99443a47dcf5d358fa9a308dc8e64c55/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wformat-nonliteral
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_c3843314db215038e4d2bae1975a85f9/test.c -> _build_/.conf_check_c3843314db215038e4d2bae1975a85f9/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: _build_/.conf_check_c3843314db215038e4d2bae1975a85f9/testbuild/test.c.1.o -> _build_/.conf_check_c3843314db215038e4d2bae1975a85f9/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_c3843314db215038e4d2bae1975a85f9/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wformat-security
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_b541336ab95d39f3a83cc78f5dc4e953/test.c -> _build_/.conf_check_b541336ab95d39f3a83cc78f5dc4e953/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: _build_/.conf_check_b541336ab95d39f3a83cc78f5dc4e953/testbuild/test.c.1.o -> _build_/.conf_check_b541336ab95d39f3a83cc78f5dc4e953/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_b541336ab95d39f3a83cc78f5dc4e953/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wignored-qualifiers
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_f3bcf50d82d1f8626d69158548075f93/test.c -> _build_/.conf_check_f3bcf50d82d1f8626d69158548075f93/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: _build_/.conf_check_f3bcf50d82d1f8626d69158548075f93/testbuild/test.c.1.o -> _build_/.conf_check_f3bcf50d82d1f8626d69158548075f93/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_f3bcf50d82d1f8626d69158548075f93/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wmissing-prototypes
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_94ae0e94c2b07996d7fba105362f0fae/test.c -> _build_/.conf_check_94ae0e94c2b07996d7fba105362f0fae/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: _build_/.conf_check_94ae0e94c2b07996d7fba105362f0fae/testbuild/test.c.1.o -> _build_/.conf_check_94ae0e94c2b07996d7fba105362f0fae/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_94ae0e94c2b07996d7fba105362f0fae/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wstrict-prototypes
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_b90903b219c20d88f84c333d81abfd4d/test.c -> _build_/.conf_check_b90903b219c20d88f84c333d81abfd4d/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype
+
+[2/2] [33mcprogram: _build_/.conf_check_b90903b219c20d88f84c333d81abfd4d/testbuild/test.c.1.o -> _build_/.conf_check_b90903b219c20d88f84c333d81abfd4d/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_b90903b219c20d88f84c333d81abfd4d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wtype-limits
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_ceff714a4984b79c4ba66a4068c11079/test.c -> _build_/.conf_check_ceff714a4984b79c4ba66a4068c11079/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype
+
+[2/2] [33mcprogram: _build_/.conf_check_ceff714a4984b79c4ba66a4068c11079/testbuild/test.c.1.o -> _build_/.conf_check_ceff714a4984b79c4ba66a4068c11079/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ceff714a4984b79c4ba66a4068c11079/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wwrite-strings
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_ab9751c6cf466fa54954085a23596058/test.c -> _build_/.conf_check_ab9751c6cf466fa54954085a23596058/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype
+
+[2/2] [33mcprogram: _build_/.conf_check_ab9751c6cf466fa54954085a23596058/testbuild/test.c.1.o -> _build_/.conf_check_ab9751c6cf466fa54954085a23596058/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ab9751c6cf466fa54954085a23596058/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wunused-but-set-variable
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_d547b103bcd5bbe89b0153212595deb7/test.c -> _build_/.conf_check_d547b103bcd5bbe89b0153212595deb7/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wunused-but-set-variable', '../test.c', '-c', '-o', 'test.c.1.o']
+err: cc1: error: unrecognized command line option "-Wunused-but-set-variable"
+
+from /root/Hifi-Pod/player/server/xmms2-devel: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 142841484: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wunused-but-set-variable', '../test.c', '-c', '-o', 'test.c.1.o']
+
+no
+from /root/Hifi-Pod/player/server/xmms2-devel: The configuration failed
+----------------------------------------------------------
+Checking for compiler flags -Wformat-extra-args
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_a3ab401bcd38f31d8be8ef3f5cc72e7e/test.c -> _build_/.conf_check_a3ab401bcd38f31d8be8ef3f5cc72e7e/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wformat-extra-args', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype
+
+[2/2] [33mcprogram: _build_/.conf_check_a3ab401bcd38f31d8be8ef3f5cc72e7e/testbuild/test.c.1.o -> _build_/.conf_check_a3ab401bcd38f31d8be8ef3f5cc72e7e/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_a3ab401bcd38f31d8be8ef3f5cc72e7e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -Wformat-zero-length
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_42adc2146ba6f59136d1aeb493d1c995/test.c -> _build_/.conf_check_42adc2146ba6f59136d1aeb493d1c995/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wformat-zero-length', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype
+
+[2/2] [33mcprogram: _build_/.conf_check_42adc2146ba6f59136d1aeb493d1c995/testbuild/test.c.1.o -> _build_/.conf_check_42adc2146ba6f59136d1aeb493d1c995/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_42adc2146ba6f59136d1aeb493d1c995/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -fdiagnostics-show-option
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_4a90e0cb0a01becfbce5e6cf03e35923/test.c -> _build_/.conf_check_4a90e0cb0a01becfbce5e6cf03e35923/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_4a90e0cb0a01becfbce5e6cf03e35923/testbuild/test.c.1.o -> _build_/.conf_check_4a90e0cb0a01becfbce5e6cf03e35923/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_4a90e0cb0a01becfbce5e6cf03e35923/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+----------------------------------------------------------
+Checking for compiler flags -fdiagnostics-show-option
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: _build_/.conf_check_162b056d5446e08751b55b9ffc8e6d89/test.cpp -> _build_/.conf_check_162b056d5446e08751b55b9ffc8e6d89/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: _build_/.conf_check_162b056d5446e08751b55b9ffc8e6d89/testbuild/test.cpp.1.o -> _build_/.conf_check_162b056d5446e08751b55b9ffc8e6d89/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.cpp.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_162b056d5446e08751b55b9ffc8e6d89/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for compiler flags -Werror=implicit-function-declaration
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_f9ee48fc46f31d03f8e1604e13874c7e/test.c -> _build_/.conf_check_f9ee48fc46f31d03f8e1604e13874c7e/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_f9ee48fc46f31d03f8e1604e13874c7e/testbuild/test.c.1.o -> _build_/.conf_check_f9ee48fc46f31d03f8e1604e13874c7e/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_f9ee48fc46f31d03f8e1604e13874c7e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for program pkg-config
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config
+find program=['pkg-config'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='PKGCONFIG' -> '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config'
+-----------------------------------------------------------------
+Checking for 'glib-2.0'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'glib-2.0', '--cflags', '--libs']
+out: -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lglib-2.0  
+
+yes
+-----------------------------------------------------------------
+Checking for 'valgrind'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'valgrind', '--cflags']
+err: Package valgrind was not found in the pkg-config search path.
+Perhaps you should add the directory containing `valgrind.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'valgrind' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel: The configuration failed
+-----------------------------------------------------------------
+Checking for 'speex'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'speex', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lspeex  
+
+yes
+-----------------------------------------------------------------
+Checking for 'ogg'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'ogg', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -logg  
+
+yes
+-----------------------------------------------------------------
+Checking for library m
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/test.c -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for 'libxml-2.0'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libxml-2.0', '--cflags', '--libs']
+out: -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/libxml2  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lxml2  
+
+yes
+-----------------------------------------------------------------
+Checking for header sys/soundcard.h
+==>
+#include <sys/soundcard.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_6ce28064ab7bf0b8b0f7080d5c1fd6ec/test.c -> _build_/.conf_check_6ce28064ab7bf0b8b0f7080d5c1fd6ec/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_6ce28064ab7bf0b8b0f7080d5c1fd6ec/testbuild/test.c.1.o -> _build_/.conf_check_6ce28064ab7bf0b8b0f7080d5c1fd6ec/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_6ce28064ab7bf0b8b0f7080d5c1fd6ec/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for library ossaudio
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e8e2d4d47e2bcf356f6a57d833fb71c0/test.c -> _build_/.conf_check_e8e2d4d47e2bcf356f6a57d833fb71c0/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_e8e2d4d47e2bcf356f6a57d833fb71c0/testbuild/test.c.1.o -> _build_/.conf_check_e8e2d4d47e2bcf356f6a57d833fb71c0/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e8e2d4d47e2bcf356f6a57d833fb71c0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lossaudio', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+err: /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: cannot find -lossaudio
+collect2: ld returned 1 exit status
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/oss: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 142786444: cprogram test.c.1.o -> testprog}
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e8e2d4d47e2bcf356f6a57d833fb71c0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lossaudio', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/oss: The configuration failed
+-----------------------------------------------------------------
+Checking for 'libpulse'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libpulse', '--cflags', '--libs']
+out: -D_REENTRANT  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lpulse  
+
+yes
+-----------------------------------------------------------------
+Checking for 'vorbisfile'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'vorbisfile', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lvorbisfile -lvorbis -lm -logg  
+
+yes
+-----------------------------------------------------------------
+Checking for 'fluidsynth'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'fluidsynth', '--cflags', '--libs']
+err: Package fluidsynth was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fluidsynth.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'fluidsynth' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/fluidsynth: The configuration failed
+-----------------------------------------------------------------
+Checking for library m
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/test.c -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for function fstatat
+==>
+#include <fcntl.h>
+#include <sys/stat.h>
+
+	int main() {
+	void *p;
+	p=(void*)(fstatat);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_555aee106163bd1b38acec3c4a5a34ae/test.c -> _build_/.conf_check_555aee106163bd1b38acec3c4a5a34ae/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-D_ATFILE_SOURCE=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:4:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_555aee106163bd1b38acec3c4a5a34ae/testbuild/test.c.1.o -> _build_/.conf_check_555aee106163bd1b38acec3c4a5a34ae/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_555aee106163bd1b38acec3c4a5a34ae/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for function dirfd
+==>
+#include <dirent.h>
+#include <sys/types.h>
+
+	int main() {
+	void *p;
+	p=(void*)(dirfd);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_21ef554b537ec4811dcca03d8807622a/test.c -> _build_/.conf_check_21ef554b537ec4811dcca03d8807622a/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:4:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_21ef554b537ec4811dcca03d8807622a/testbuild/test.c.1.o -> _build_/.conf_check_21ef554b537ec4811dcca03d8807622a/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_21ef554b537ec4811dcca03d8807622a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for 'sndfile'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'sndfile', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lsndfile  
+
+yes
+-----------------------------------------------------------------
+Checking for 'libcurl'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libcurl', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lcurl  
+
+yes
+-----------------------------------------------------------------
+Checking for function curl_multi_strerror
+==>
+#include <curl/curl.h>
+
+	int main() {
+	void *p;
+	p=(void*)(curl_multi_strerror);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_85f96fd302aff986dc55b78b82b7041e/test.c -> _build_/.conf_check_85f96fd302aff986dc55b78b82b7041e/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_85f96fd302aff986dc55b78b82b7041e/testbuild/test.c.1.o -> _build_/.conf_check_85f96fd302aff986dc55b78b82b7041e/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_85f96fd302aff986dc55b78b82b7041e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-lcurl', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for 'alsa'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'alsa', '--cflags', '--libs']
+out: -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/alsa  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lasound  
+
+yes
+-----------------------------------------------------------------
+Checking for header mpc/mpcdec.h
+==>
+#include <mpc/mpcdec.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_21f48156fa682548de83185d8d95e69c/test.c -> _build_/.conf_check_21f48156fa682548de83185d8d95e69c/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:1:24: fatal error: mpc/mpcdec.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/musepack: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 142786476: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '../test.c', '-c', '-o', 'test.c.1.o']
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/musepack: The configuration failed
+-----------------------------------------------------------------
+Checking for header mpcdec/mpcdec.h
+==>
+#include <mpcdec/mpcdec.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_a373a98b0928a5384f9a458635ea4184/test.c -> _build_/.conf_check_a373a98b0928a5384f9a458635ea4184/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPCDEC_OLD', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:1:27: fatal error: mpcdec/mpcdec.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/musepack: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143466220: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPCDEC_OLD', '../test.c', '-c', '-o', 'test.c.1.o']
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/musepack: The configuration failed
+-----------------------------------------------------------------
+Checking for 'libmpg123' >= 1.5.1
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', '--atleast-version=1.5.1', 'libmpg123']
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libmpg123', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lmpg123  
+
+yes
+-----------------------------------------------------------------
+Testing mpg123 with default off_t
+==>
+#include <mpg123.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_fff1344612010088ceda7f457f31590c/test.c -> _build_/.conf_check_fff1344612010088ceda7f457f31590c/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_fff1344612010088ceda7f457f31590c/testbuild/test.c.1.o -> _build_/.conf_check_fff1344612010088ceda7f457f31590c/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_fff1344612010088ceda7f457f31590c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-lmpg123', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for 'ao'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'ao', '--cflags', '--libs']
+err: Package ao was not found in the pkg-config search path.
+Perhaps you should add the directory containing `ao.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'ao' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/ao: The configuration failed
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/sun: Sun plugin not supported on this platform
+-----------------------------------------------------------------
+Checking for 'libavcodec'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libavcodec', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lavcodec  
+
+yes
+-----------------------------------------------------------------
+Checking for header avcodec.h
+==>
+#include <avcodec.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e2de01fb9a7cba01e3b4f89162c7a193/test.c -> _build_/.conf_check_e2de01fb9a7cba01e3b4f89162c7a193/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-fPIC', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:1:21: fatal error: avcodec.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/avcodec: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143465676: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-fPIC', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/avcodec: The configuration failed
+-----------------------------------------------------------------
+Checking for header libavcodec/avcodec.h
+==>
+#include <libavcodec/avcodec.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_2e263339a9419d3e1f3defed3a2a4a8e/test.c -> _build_/.conf_check_2e263339a9419d3e1f3defed3a2a4a8e/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-fPIC', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcshlib: _build_/.conf_check_2e263339a9419d3e1f3defed3a2a4a8e/testbuild/test.c.1.o -> _build_/.conf_check_2e263339a9419d3e1f3defed3a2a4a8e/testbuild/libtestprog.so
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_2e263339a9419d3e1f3defed3a2a4a8e/testbuild/libtestprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-lavcodec', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-shared']
+yes
+-----------------------------------------------------------------
+Checking for 'libcdio_cdda'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libcdio_cdda', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lcdio_cdda -lcdio -lm  
+
+yes
+-----------------------------------------------------------------
+Checking for 'libdiscid'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libdiscid', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -ldiscid  
+
+yes
+-----------------------------------------------------------------
+Checking for header sys/select.h
+==>
+#include <sys/select.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_8b711d2066e8f90e0d7f20ac397c5716/test.c -> _build_/.conf_check_8b711d2066e8f90e0d7f20ac397c5716/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_8b711d2066e8f90e0d7f20ac397c5716/testbuild/test.c.1.o -> _build_/.conf_check_8b711d2066e8f90e0d7f20ac397c5716/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_8b711d2066e8f90e0d7f20ac397c5716/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for 'openssl'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'openssl', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lssl -lcrypto  
+
+yes
+-----------------------------------------------------------------
+Checking for 'libgme'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libgme', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lgme  
+
+yes
+-----------------------------------------------------------------
+Checking for library m
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/test.c -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for 'shout'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'shout', '--cflags', '--libs']
+err: Package shout was not found in the pkg-config search path.
+Perhaps you should add the directory containing `shout.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'shout' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/ices: The configuration failed
+-----------------------------------------------------------------
+Checking for 'sc68' >= 2.3.0
+['sc68-config', '--atleast-version=2.3.0', 'sc68']
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/sc68: The configuration failed
+-----------------------------------------------------------------
+Checking for 'libsidplay2'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libsidplay2', '--cflags', '--libs']
+err: Package libsidplay2 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libsidplay2.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libsidplay2' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/sid: The configuration failed
+-----------------------------------------------------------------
+Checking for 'gio-2.0'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'gio-2.0', '--cflags', '--libs']
+out: -pthread -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -pthread -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lgio-2.0 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lrt -lglib-2.0  
+
+yes
+-----------------------------------------------------------------
+Checking for 'modplug'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'modplug', '--cflags', '--libs']
+err: Package modplug was not found in the pkg-config search path.
+Perhaps you should add the directory containing `modplug.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'modplug' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/modplug: The configuration failed
+-----------------------------------------------------------------
+Checking for 'libmodplug'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libmodplug', '--cflags', '--libs']
+out: -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/libmodplug  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lmodplug  
+
+yes
+-----------------------------------------------------------------
+Checking for header AudioUnit/AudioUnit.h
+==>
+#include <AudioUnit/AudioUnit.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_f306fe5c96ac3e8a154952d26ad71771/test.c -> _build_/.conf_check_f306fe5c96ac3e8a154952d26ad71771/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_COREAUDIO', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:1:33: fatal error: AudioUnit/AudioUnit.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/coreaudio: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143288684: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_COREAUDIO', '../test.c', '-c', '-o', 'test.c.1.o']
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/coreaudio: The configuration failed
+-----------------------------------------------------------------
+Checking for 'neuros-cooler-media'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'neuros-cooler-media', '--cflags', '--libs']
+err: Package neuros-cooler-media was not found in the pkg-config search path.
+Perhaps you should add the directory containing `neuros-cooler-media.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'neuros-cooler-media' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/nms: The configuration failed
+-----------------------------------------------------------------
+Checking for 'mad'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'mad', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lmad -lm  
+
+yes
+-----------------------------------------------------------------
+Checking for 'mms'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'mms', '--cflags', '--libs']
+err: Package mms was not found in the pkg-config search path.
+Perhaps you should add the directory containing `mms.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'mms' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/mms: The configuration failed
+-----------------------------------------------------------------
+Checking for 'libmms'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libmms', '--cflags', '--libs']
+out: -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/ -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lmms -lm -lglib-2.0  
+
+yes
+-----------------------------------------------------------------
+Checking for header mac/All.h
+==>
+#include <mac/All.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: _build_/.conf_check_baa8608b1e15e9b68eb4c891dd7dfd4b/test.cpp -> _build_/.conf_check_baa8608b1e15e9b68eb4c891dd7dfd4b/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp:1:21: fatal error: mac/All.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/mac: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143566188: cxx test.cpp -> test.cpp.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/mac: The configuration failed
+-----------------------------------------------------------------
+Checking for header libsmbclient.h
+==>
+#include <libsmbclient.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_a494961691443b6cd7e4b6c193959bbb/test.c -> _build_/.conf_check_a494961691443b6cd7e4b6c193959bbb/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:1:26: fatal error: libsmbclient.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/samba: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143568556: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '../test.c', '-c', '-o', 'test.c.1.o']
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/samba: The configuration failed
+-----------------------------------------------------------------
+Checking for 'flac'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'flac', '--cflags', '--libs']
+out: -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/FLAC  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lFLAC -lm  
+
+yes
+-----------------------------------------------------------------
+Checking for header tremor/ivorbisfile.h
+==>
+#include <tremor/ivorbisfile.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_f8f0e4e1ed986298a302957cc715e789/test.c -> _build_/.conf_check_f8f0e4e1ed986298a302957cc715e789/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_f8f0e4e1ed986298a302957cc715e789/testbuild/test.c.1.o -> _build_/.conf_check_f8f0e4e1ed986298a302957cc715e789/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_f8f0e4e1ed986298a302957cc715e789/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lvorbisidec', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for 'wavpack'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'wavpack', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lwavpack -lm  
+
+yes
+-----------------------------------------------------------------
+Checking for 'libxml-2.0'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libxml-2.0', '--cflags', '--libs']
+out: -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/libxml2  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lxml2  
+
+yes
+-----------------------------------------------------------------
+Checking for 'libofa'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libofa', '--cflags', '--libs']
+err: Package libofa was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libofa.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libofa' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/ofa: The configuration failed
+-----------------------------------------------------------------
+Checking for 'avahi-glib'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'avahi-glib', '--cflags', '--libs']
+out: -D_REENTRANT -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lavahi-glib -lglib-2.0  
+
+yes
+-----------------------------------------------------------------
+Checking for 'avahi-client'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'avahi-client', '--cflags', '--libs']
+out: -D_REENTRANT  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lavahi-common -lavahi-client  
+
+yes
+-----------------------------------------------------------------
+Selected daap backend
+avahi
+-----------------------------------------------------------------
+Checking for library m
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/test.c -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for header faad.h
+==>
+#include <faad.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_36e2615ebeda39bd722a2194c41f2834/test.c -> _build_/.conf_check_36e2615ebeda39bd722a2194c41f2834/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: In file included from ../test.c:1:0:
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/faad.h:32:9: note: #pragma message: please update faad2 include filename and function names!
+../test.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_36e2615ebeda39bd722a2194c41f2834/testbuild/test.c.1.o -> _build_/.conf_check_36e2615ebeda39bd722a2194c41f2834/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_36e2615ebeda39bd722a2194c41f2834/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for library faad
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_9ad2782f6c1caa14dbf68833b596d7d8/test.c -> _build_/.conf_check_9ad2782f6c1caa14dbf68833b596d7d8/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_9ad2782f6c1caa14dbf68833b596d7d8/testbuild/test.c.1.o -> _build_/.conf_check_9ad2782f6c1caa14dbf68833b596d7d8/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_9ad2782f6c1caa14dbf68833b596d7d8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lfaad', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for library m
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/test.c -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+yes
+-----------------------------------------------------------------
+Checking for header windows.h
+==>
+#include <windows.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_87e9ead8178863319ba4b040ab07477b/test.c -> _build_/.conf_check_87e9ead8178863319ba4b040ab07477b/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:1:21: fatal error: windows.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/waveout: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143660396: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/waveout: The configuration failed
+-----------------------------------------------------------------
+Checking for 'fftw3f'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'fftw3f', '--cflags', '--libs']
+err: Package fftw3f was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3f.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'fftw3f' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/plugins/vocoder: The configuration failed
+-----------------------------------------------------------------
+Checking for 'jack'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'jack', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -ljack -lpthread -lrt  
+
+yes
+-----------------------------------------------------------------
+Checking for 'avahi-client'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'avahi-client', '--cflags', '--libs']
+out: -D_REENTRANT  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lavahi-common -lavahi-client  
+
+yes
+-----------------------------------------------------------------
+Checking for 'avahi-glib'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'avahi-glib', '--cflags', '--libs']
+out: -D_REENTRANT -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lavahi-glib -lglib-2.0  
+
+yes
+-----------------------------------------------------------------
+Checking for 'ecore'
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'ecore', '--cflags', '--libs']
+err: Package ecore was not found in the pkg-config search path.
+Perhaps you should add the directory containing `ecore.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'ecore' found
+
+not found
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/xmmsclient-ecore: The configuration failed
+-----------------------------------------------------------------
+Checking for 'sqlite3' >= 3.5
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', '--atleast-version=3.5', 'sqlite3']
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'sqlite3', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lsqlite3  
+
+yes
+-----------------------------------------------------------------
+Checking for 'gthread-2.0' >= 2.6.0
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', '--atleast-version=2.6.0', 'gthread-2.0']
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'gthread-2.0', '--cflags', '--libs']
+out: -pthread -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -pthread -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lgthread-2.0 -lrt -lglib-2.0  
+
+yes
+-----------------------------------------------------------------
+Checking boost includes
+==>
+
+#include <iostream>
+#include <boost/version.hpp>
+int main() { std::cout << BOOST_LIB_VERSION << std::endl; }
+
+<==
+[1/3] [32mcxx: _build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/test.cpp -> _build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-I/root/boost_1_51_0', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/3] [33mcxxprogram: _build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/test.cpp.1.o -> _build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.cpp.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+err: test.cpp.1.o: In function `main':
+/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/../test.cpp:4: undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/../test.cpp:4: undefined reference to `std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))'
+/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/../test.cpp:4: undefined reference to `std::cout'
+/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/../test.cpp:4: undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+test.cpp.1.o: In function `__static_initialization_and_destruction_0':
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/include/c++/4.5.3/iostream:73: undefined reference to `std::ios_base::Init::Init()'
+test.cpp.1.o: In function `__static_initialization_and_destruction_0':
+/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/../test.cpp:4: undefined reference to `std::ios_base::Init::~Init()'
+collect2: ld returned 1 exit status
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/xmmsclient++: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143624140: cxxprogram test.cpp.1.o -> testprog}
+['arm-arago-linux-gnueabi-gcc', 'test.cpp.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ee1b3fc777e76b63e4c647d976130c1e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/xmmsclient++: The configuration failed
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/xmmsclient-cf: Not supported on this platform
+==>
+#include <stdio.h>
+#include <readline/readline.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/test.c -> _build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:4:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/testbuild/test.c.1.o -> _build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+#include <stdio.h>
+#include <readline/readline.h>
+
+	int main() {
+	void *p;
+	p=(void*)(rl_filename_dequoting_function);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_10b90c7fc0e66eeea52daa6c7891b9ab/test.c -> _build_/.conf_check_10b90c7fc0e66eeea52daa6c7891b9ab/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_STDIO_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:4:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_10b90c7fc0e66eeea52daa6c7891b9ab/testbuild/test.c.1.o -> _build_/.conf_check_10b90c7fc0e66eeea52daa6c7891b9ab/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_10b90c7fc0e66eeea52daa6c7891b9ab/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-lreadline', '-lglib-2.0', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+find program=['valgrind'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='VALGRIND' -> ''
+from /root/Hifi-Pod/player/server/xmms2-devel/tests: Could not find the program valgrind
+find program=['lcov'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='LCOV' -> ''
+from /root/Hifi-Pod/player/server/xmms2-devel/tests: Could not find the program lcov
+find program=['genhtml'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='GENHTML' -> ''
+from /root/Hifi-Pod/player/server/xmms2-devel/tests: Could not find the program genhtml
+==>
+#include <CUnit/CUnit.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_f869c5603269d1c1fbb3df70781d69e2/test.c -> _build_/.conf_check_f869c5603269d1c1fbb3df70781d69e2/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_STDIO_H=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:1:25: fatal error: CUnit/CUnit.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/tests: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 142355212: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_STDIO_H=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '../test.c', '-c', '-o', 'test.c.1.o']
+
+from /root/Hifi-Pod/player/server/xmms2-devel/tests: The configuration failed
+find program=['python'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='PYTHON' -> '/usr/bin/python'
+['/usr/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
+out: 2
+6
+5
+final
+0
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/usr') or ''))"]
+out: '/usr/lib/python2.6/dist-packages'
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0, prefix='/usr') or ''))"]
+out: '/usr/lib/python2.6/dist-packages'
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))"]
+out: '/usr'
+'.so'
+'-Wl,-Bsymbolic-functions'
+'/usr/lib'
+'/usr/lib/python2.6/config'
+'/usr/include/python2.6'
+''
+''
+'gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions'
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes'
+
+Configuration returned from ['/usr/bin/python']:
+"prefix = '/usr'\nSO = '.so'\nLDFLAGS = '-Wl,-Bsymbolic-functions'\nLIBDIR = '/usr/lib'\nLIBPL = '/usr/lib/python2.6/config'\nINCLUDEPY = '/usr/include/python2.6'\nPy_ENABLE_SHARED = ''\nMACOSX_DEPLOYMENT_TARGET = ''\nLDSHARED = 'gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions'\nCFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes'"
+
+
+
+# try again with -L$python_LIBDIR: ['/usr/lib']
+
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: _build_/.conf_check_c4081480d4a9d97f4ed31819aee44093/test.cpp -> _build_/.conf_check_c4081480d4a9d97f4ed31819aee44093/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-pthread', '-fno-strict-aliasing', '-fwrapv', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_STDIO_H=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: _build_/.conf_check_c4081480d4a9d97f4ed31819aee44093/testbuild/test.cpp.1.o -> _build_/.conf_check_c4081480d4a9d97f4ed31819aee44093/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.cpp.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_c4081480d4a9d97f4ed31819aee44093/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.6', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-Wl,-Bsymbolic-functions', '-pthread', '-Wl,-O1', '-Wl,-Bsymbolic-functions']
+err: /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: skipping incompatible /usr/lib/libpthread.so when searching for -lpthread
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: skipping incompatible /usr/lib/libpthread.a when searching for -lpthread
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: skipping incompatible /usr/lib/../../lib/libpthread.so.0 when searching for ../../lib/libpthread.so.0
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: skipping incompatible /usr/lib/./libpthread_nonshared.a when searching for ./libpthread_nonshared.a
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: skipping incompatible /usr/lib/libc.so when searching for -lc
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: skipping incompatible /usr/lib/libc.a when searching for -lc
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: skipping incompatible /usr/lib/../../lib/libc.so.6 when searching for ../../lib/libc.so.6
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: skipping incompatible /usr/lib/./libc_nonshared.a when searching for ./libc_nonshared.a
+
+find program=['python2.6-config', 'python-config-2.6', 'python2.6m-config'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='PYTHON_CONFIG' -> ''
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/python: Could not find the program python2.6-config,python-config-2.6,python2.6m-config
+Include path for Python extensions (found via distutils module): '/usr/include/python2.6'
+
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main()
+{
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: _build_/.conf_check_d6c8946949ece91ce43c989711393fec/test.cpp -> _build_/.conf_check_d6c8946949ece91ce43c989711393fec/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-pthread', '-fno-strict-aliasing', '-fwrapv', '-fno-strict-aliasing', '-I/usr/include/python2.6', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_STDIO_H=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp:2:20: fatal error: Python.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/python: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143624428: cxx test.cpp -> test.cpp.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-pthread', '-fno-strict-aliasing', '-fwrapv', '-fno-strict-aliasing', '-I/usr/include/python2.6', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_STDIO_H=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/python: The configuration failed
+[[], '--cflags', '--libs']
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/python: The configuration failed
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'gio-2.0', '--cflags', '--libs']
+out: -pthread -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -pthread -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lgio-2.0 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lrt -lglib-2.0  
+
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'gthread-2.0', '--cflags', '--libs']
+out: -pthread -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -pthread -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lgthread-2.0 -lrt -lglib-2.0  
+
+==>
+#include <gio/gio.h>
+
+	int main() {
+	void *p;
+	p=(void*)(g_file_query_file_type);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_a231d83380614dd564c28b402b00e5f4/test.c -> _build_/.conf_check_a231d83380614dd564c28b402b00e5f4/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-pthread', '-pthread', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_STDIO_H=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_a231d83380614dd564c28b402b00e5f4/testbuild/test.c.1.o -> _build_/.conf_check_a231d83380614dd564c28b402b00e5f4/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_a231d83380614dd564c28b402b00e5f4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-lgio-2.0', '-lgobject-2.0', '-lgmodule-2.0', '-lgthread-2.0', '-lrt', '-lglib-2.0', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-pthread', '-pthread']
+find program=['flex'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='FLEX' -> '/usr/bin/flex'
+find program=['bison'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='BISON' -> '/usr/bin/bison'
+==>
+#include <stdio.h>
+#include <readline/readline.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/test.c -> _build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:4:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/testbuild/test.c.1.o -> _build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_ca5fa7eccc4ace74a3aab3f6f3979029/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+#include <stdio.h>
+#include <readline/readline.h>
+
+	int main() {
+	void *p;
+	p=(void*)(readline);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_52fd9337677f10b3c5dc81270fede225/test.c -> _build_/.conf_check_52fd9337677f10b3c5dc81270fede225/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:4:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_52fd9337677f10b3c5dc81270fede225/testbuild/test.c.1.o -> _build_/.conf_check_52fd9337677f10b3c5dc81270fede225/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_52fd9337677f10b3c5dc81270fede225/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lreadline', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+find program=['perl'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='PERL' -> '/usr/bin/perl'
+['/usr/bin/perl', '-e', 'printf "%vd", $^V']
+out: 5.10.1
+/usr/bin/perl -MConfig -e'print $Config{lddlflags}'
+out: -shared -O2 -g -L/usr/local/lib -fstack-protector
+/usr/bin/perl -MConfig -e'print "$Config{archlib}/CORE"'
+out: /usr/lib/perl/5.10/CORE
+/usr/bin/perl -MConfig -e'print "$Config{ccflags} $Config{cccdlflags}"'
+out: -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fPIC
+/usr/bin/perl -MConfig -e'print "$Config{privlib}/ExtUtils/xsubpp$Config{exe_ext}"'
+out: /usr/share/perl/5.10/ExtUtils/xsubpp
+/usr/bin/perl -MConfig -e'print "$Config{privlib}/ExtUtils/typemap"'
+out: /usr/share/perl/5.10/ExtUtils/typemap
+/usr/bin/perl -MConfig -e'print $Config{sitearch}'
+out: /usr/local/lib/perl/5.10.1
+/usr/bin/perl -MConfig -e'print $Config{dlext}'
+out: so
+(tool podselect is already loaded, skipping)
+find program=['ruby'] paths=['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/usr/local/ti-sdk-am335x-evm/linux-devkit/bin', '/opt/jdk1.6.0_23/jre/bin', '/opt/jdk1.6.0_23/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/opt/jdk1.6.0_23/bin', '/opt/jdk1.6.0_23/bin/tools.jar', '/opt/jdk1.6.0_23/jre/bin'] var='RUBY' -> '/usr/bin/ruby'
+['/usr/bin/ruby', '-e', 'puts defined?(VERSION) ? VERSION : RUBY_VERSION']
+out: 1.8.7
+
+['/usr/bin/ruby', '-rrbconfig', '-e', "puts Config::CONFIG['archdir']"]
+out: /usr/lib/ruby/1.8/i486-linux
+
+==>
+#include <ruby.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: _build_/.conf_check_c98e90ac38234c16ad5f284f23cca04b/test.cpp -> _build_/.conf_check_c98e90ac38234c16ad5f284f23cca04b/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-I/usr/lib/ruby/1.8/i486-linux', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+err: ../test.cpp:1:18: fatal error: ruby.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/ruby: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143594796: cxx test.cpp -> test.cpp.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-I/usr/lib/ruby/1.8/i486-linux', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/clients/lib/ruby: The configuration failed
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/test.c -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/test.c.1.o -> _build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e32552694af6636734de8c1ce28a709d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'vorbisenc', '--cflags', '--libs']
+out:  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lvorbisenc -lvorbis -lm -logg  
+
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'libvisual-0.4', '--cflags', '--libs']
+out: -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/libvisual-0.4  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lpthread -lm -ldl -lvisual-0.4  
+
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'sdl', '--cflags', '--libs']
+out: -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/SDL  -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lSDL -lpthread  
+
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', '--atleast-version=2.6.0', 'gmodule-2.0']
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'gmodule-2.0', '--cflags', '--libs']
+out: -pthread -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -Wl,--export-dynamic -pthread -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lgmodule-2.0 -lrt -lglib-2.0  
+
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', '--atleast-version=2.6.0', 'gthread-2.0']
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'gthread-2.0', '--cflags', '--libs']
+out: -pthread -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include/glib-2.0 -I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib/glib-2.0/include  -pthread -L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib -lgthread-2.0 -lrt -lglib-2.0  
+
+==>
+#include <math.h>
+
+	int main() {
+	void *p;
+	p=(void*)(sin);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_631dda88c388a8a64d6e3d7a97f1f84f/test.c -> _build_/.conf_check_631dda88c388a8a64d6e3d7a97f1f84f/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_631dda88c388a8a64d6e3d7a97f1f84f/testbuild/test.c.1.o -> _build_/.conf_check_631dda88c388a8a64d6e3d7a97f1f84f/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_631dda88c388a8a64d6e3d7a97f1f84f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+#include <sys/vfs.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: _build_/.conf_check_10682cdc4a2aaaf2cc2356bd3519a4c3/test.cpp -> _build_/.conf_check_10682cdc4a2aaaf2cc2356bd3519a4c3/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: _build_/.conf_check_10682cdc4a2aaaf2cc2356bd3519a4c3/testbuild/test.cpp.1.o -> _build_/.conf_check_10682cdc4a2aaaf2cc2356bd3519a4c3/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.cpp.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_10682cdc4a2aaaf2cc2356bd3519a4c3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+#include <time.h>
+
+	int main() {
+	void *p;
+	p=(void*)(localtime_r);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_d139939401a08dfc465ab77607006652/test.c -> _build_/.conf_check_d139939401a08dfc465ab77607006652/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_d139939401a08dfc465ab77607006652/testbuild/test.c.1.o -> _build_/.conf_check_d139939401a08dfc465ab77607006652/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_d139939401a08dfc465ab77607006652/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+#include <sys/prctl.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: _build_/.conf_check_6f52ccf08d9a2f5b234d5a0e981ce59f/test.cpp -> _build_/.conf_check_6f52ccf08d9a2f5b234d5a0e981ce59f/testbuild/test.cpp.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-fdiagnostics-show-option', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: _build_/.conf_check_6f52ccf08d9a2f5b234d5a0e981ce59f/testbuild/test.cpp.1.o -> _build_/.conf_check_6f52ccf08d9a2f5b234d5a0e981ce59f/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.cpp.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_6f52ccf08d9a2f5b234d5a0e981ce59f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+
+#include <sys/prctl.h>
+int main() {
+  return prctl(PR_SET_NAME, (unsigned long) "test", 0, 0, 0);
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_e78536ad252784de1bb7a1b4155eaf8c/test.c -> _build_/.conf_check_e78536ad252784de1bb7a1b4155eaf8c/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_e78536ad252784de1bb7a1b4155eaf8c/testbuild/test.c.1.o -> _build_/.conf_check_e78536ad252784de1bb7a1b4155eaf8c/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_e78536ad252784de1bb7a1b4155eaf8c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/sem.h>
+
+	int main() {
+	void *p;
+	p=(void*)(semctl);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_60f4ceb88c158a445f6750b4335d8497/test.c -> _build_/.conf_check_60f4ceb88c158a445f6750b4335d8497/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:5:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_60f4ceb88c158a445f6750b4335d8497/testbuild/test.c.1.o -> _build_/.conf_check_60f4ceb88c158a445f6750b4335d8497/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_60f4ceb88c158a445f6750b4335d8497/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+
+#include <time.h>
+#include <sys/sem.h>
+int main() {
+  union semun foo;
+  return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_6575572ee4ebb2af5b7bfb19eaa41dfd/test.c -> _build_/.conf_check_6575572ee4ebb2af5b7bfb19eaa41dfd/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:4:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+../test.c: In function 'main':
+../test.c:5:15: error: storage size of 'foo' isn't known
+../test.c:5:15: warning: unused variable 'foo' [-Wunused-variable]
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/xmms: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143501516: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '../test.c', '-c', '-o', 'test.c.1.o']
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/xmms: The configuration failed
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'valgrind', '--cflags']
+err: Package valgrind was not found in the pkg-config search path.
+Perhaps you should add the directory containing `valgrind.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'valgrind' found
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/xmms: The configuration failed
+==>
+#include <time.h>
+
+	int main() {
+	void *p;
+	p=(void*)(nanosleep);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_82de9fde059d856cb0f0b7b77c3f4a64/test.c -> _build_/.conf_check_82de9fde059d856cb0f0b7b77c3f4a64/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_82de9fde059d856cb0f0b7b77c3f4a64/testbuild/test.c.1.o -> _build_/.conf_check_82de9fde059d856cb0f0b7b77c3f4a64/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_82de9fde059d856cb0f0b7b77c3f4a64/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+==>
+#include <math.h>
+
+	int main() {
+	void *p;
+	p=(void*)(modf);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_099c5efeff4708c792cb6d677f88ab3d/test.c -> _build_/.conf_check_099c5efeff4708c792cb6d677f88ab3d/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '-DHAVE_NANOSLEEP=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:3:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_099c5efeff4708c792cb6d677f88ab3d/testbuild/test.c.1.o -> _build_/.conf_check_099c5efeff4708c792cb6d677f88ab3d/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_099c5efeff4708c792cb6d677f88ab3d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lm', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+(tool unittest is already loaded, skipping)
+==>
+#include <CUnit/CUnit.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_f869c5603269d1c1fbb3df70781d69e2/test.c -> _build_/.conf_check_f869c5603269d1c1fbb3df70781d69e2/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '-DHAVE_NANOSLEEP=1', '-DHAVE_MODF=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:1:25: fatal error: CUnit/CUnit.h: No such file or directory
+compilation terminated.
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/lib/s4/tests: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143539820: c test.c -> test.c.1.o}
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '-DHAVE_NANOSLEEP=1', '-DHAVE_MODF=1', '../test.c', '-c', '-o', 'test.c.1.o']
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/lib/s4/tests: The configuration failed
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_be44ba44bc0bdbed7a1e4b7fa40d7d7a/test.c -> _build_/.conf_check_be44ba44bc0bdbed7a1e4b7fa40d7d7a/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '-DHAVE_NANOSLEEP=1', '-DHAVE_MODF=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_be44ba44bc0bdbed7a1e4b7fa40d7d7a/testbuild/test.c.1.o -> _build_/.conf_check_be44ba44bc0bdbed7a1e4b7fa40d7d7a/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_be44ba44bc0bdbed7a1e4b7fa40d7d7a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lcunit', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+err: /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/../../../../arm-arago-linux-gnueabi/bin/ld: cannot find -lcunit
+collect2: ld returned 1 exit status
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/lib/s4/tests: Test does not build: Traceback (most recent call last):
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Tools/c_config.py", line 435, in run_c_code
+    bld.compile()
+  File "/root/Hifi-Pod/player/server/xmms2-devel/.waf-1.6.7-b271784c448ab906d5606267fb7f92c0/waflib/Build.py", line 193, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task failed (exit status 1): 
+	{task 143434764: cprogram test.c.1.o -> testprog}
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_be44ba44bc0bdbed7a1e4b7fa40d7d7a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lcunit', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/lib/s4/tests: The configuration failed
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_de5728f3bbceb5597b806a4c458abefe/test.c -> _build_/.conf_check_de5728f3bbceb5597b806a4c458abefe/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '-DHAVE_NANOSLEEP=1', '-DHAVE_MODF=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:2:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_de5728f3bbceb5597b806a4c458abefe/testbuild/test.c.1.o -> _build_/.conf_check_de5728f3bbceb5597b806a4c458abefe/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_de5728f3bbceb5597b806a4c458abefe/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lncurses', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']
+['/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/pkg-config', 'valgrind', '--cflags']
+err: Package valgrind was not found in the pkg-config search path.
+Perhaps you should add the directory containing `valgrind.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'valgrind' found
+
+from /root/Hifi-Pod/player/server/xmms2-devel/src/lib/s4/tests: The configuration failed
+==>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/sem.h>
+
+	int main() {
+	void *p;
+	p=(void*)(semtimedop);
+	return 0;
+}
+
+<==
+[1/2] [32mc: _build_/.conf_check_adb24122937b7c0e484c76910339933a/test.c -> _build_/.conf_check_adb24122937b7c0e484c76910339933a/testbuild/test.c.1.o
+[0m
+['arm-arago-linux-gnueabi-gcc', '-I/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/include', '-g', '-O0', '-Wall', '-Wempty-body', '-Wformat=2', '-Wformat-nonliteral', '-Wformat-security', '-Wignored-qualifiers', '-Wmissing-prototypes', '-Wstrict-prototypes', '-Wtype-limits', '-Wwrite-strings', '-Wno-format-extra-args', '-Wno-format-zero-length', '-fdiagnostics-show-option', '-Werror=implicit-function-declaration', '-DHAVE_GLIB2=1', '-DHAVE_SPEEX=1', '-DHAVE_OGG=1', '-DHAVE_XML2=1', '-DHAVE_SYS_SOUNDCARD_H=1', '-DOSS_DEFAULT_DEVICE="/dev/audio"', '-DHAVE_PULSE=1', '-DHAVE_VORBISFILE=1', '-DHAVE_FSTATAT=1', '-DHAVE_DIRFD=1', '-DHAVE_SNDFILE=1', '-DHAVE_CURL=1', '-DHAVE_CURL_MULTI_STRERROR=1', '-DHAVE_ALSA=1', '-DHAVE_MPG123=1', '-DHAVE_MPG123_H=1', '-DHAVE_AVCODEC=1', '-DHAVE_LIBAVCODEC_AVCODEC_H=1', '-DHAVE_CDDA=1', '-DHAVE_DISCID=1', '-DHAVE_SYS_SELECT_H=1', '-DHAVE_OPENSSL=1', '-DHAVE_GME=1', '-DHAVE_GVFS=1', '-DHAVE_MODPLUG=1', '-DHAVE_MAD=1', '-DHAVE_MMS=1', '-DHAVE_FLAC=1', '-DHAVE_TREMOR_IVORBISFILE_H=1', '-DHAVE_WAVPACK=1', '-DHAVE_AVAHIGLIB=1', '-DHAVE_AVAHICLIENT=1', '-DHAVE_FAAD_H=1', '-DHAVE_JACK=1', '-DHAVE_SQLITE3=1', '-DHAVE_GTHREAD2=1', '-DHAVE_RL_FILENAME_DEQUOTING_FUNCTION=1', '-DPYTHONDIR="/usr/lib/python2.6/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.6/dist-packages"', '-DHAVE_GIO2=1', '-DHAVE_G_FILE_QUERY_FILE_TYPE=1', '-DHAVE_STDIO_H=1', '-DHAVE_READLINE=1', '-DHAVE_VORBISENC=1', '-DHAVE_VISUAL=1', '-DHAVE_SDL=1', '-DHAVE_GMODULE2=1', '-DHAVE_SIN=1', '-DHAVE_SYS_VFS_H=1', '-DHAVE_LOCALTIME_R=1', '-DHAVE_SYS_PRCTL_H=1', '-DHAVE_SEMCTL=1', '-DHAVE_NANOSLEEP=1', '-DHAVE_MODF=1', '-D_GNU_SOURCE=1', '../test.c', '-c', '-o', 'test.c.1.o']
+err: ../test.c:5:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+
+[2/2] [33mcprogram: _build_/.conf_check_adb24122937b7c0e484c76910339933a/testbuild/test.c.1.o -> _build_/.conf_check_adb24122937b7c0e484c76910339933a/testbuild/testprog
+[0m
+['arm-arago-linux-gnueabi-gcc', 'test.c.1.o', '-o', '/root/Hifi-Pod/player/server/xmms2-devel/_build_/.conf_check_adb24122937b7c0e484c76910339933a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu', '-static-libgcc', '-L/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-rpath-link,/usr/local/ti-sdk-am335x-evm/linux-devkit/arm-arago-linux-gnueabi/usr/lib', '-Wl,-O1', '-Wl,--hash-style=gnu']

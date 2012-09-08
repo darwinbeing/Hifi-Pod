@@ -1,0 +1,8 @@
+from waftools.plugin import plugin
+
+def plugin_configure(conf):
+    conf.check_cc(header_name="windows.h")
+    conf.check_cc(lib="winmm", uselib_store="winmm")
+
+configure, build = plugin("waveout", configure=plugin_configure, output_prio=30,
+                          libs=["winmm"])

@@ -1,0 +1,135 @@
+#encoding: utf-8
+
+testutils_src = """
+utils/jsonism.c
+utils/value_utils.c
+utils/coll_utils.c
+utils/ipc_call.c
+utils/mlib_utils.c
+""".split()
+
+test_xmmstypes_src = """
+xmmsv/t_coll.c
+xmmsv/t_xmmsv.c
+xmmsv/t_xmmsv_serialization.c
+""".split()
+
+test_server_src = """
+../src/xmms/streamtype.c
+../src/xmms/object.c
+server/t_streamtype.c
+""".split()
+
+test_mlib_src = """
+server/t_medialib.c
+""".split()
+
+test_playlist_src = """
+server/t_playlist.c
+""".split()
+
+test_collection_src = """
+server/t_collection.c
+""".split()
+
+test_xform_src = """
+server/t_xform.c
+""".split()
+
+mlib_runner_src = """
+server/medialib-runner.c
+""".split()
+
+def configure(conf):
+    conf.load("unittest", tooldir="waftools")
+
+    conf.check_cc(header_name="CUnit/CUnit.h")
+    conf.check_cc(lib="cunit", uselib_store="cunit")
+    conf.check_cc(lib="ncurses", uselib_store="ncurses", mandatory=False)
+
+    conf.check_cfg(package='valgrind', uselib_store='valgrind', args='--cflags', mandatory=False)
+
+def build(bld):
+    bld(features = "c",
+        target = "testutils_json",
+        source = "utils/json.c",
+        uselib = "DISABLE_MISSINGPROTOTYPES DISABLE_WRITESTRINGS",
+        install_path = None,
+        )
+
+    bld(features = "c cstlib",
+        target = "testutils",
+        source = testutils_src,
+        add_objects = "testutils_json",
+        includes = ". ../src/include ../src/includepriv",
+        uselib = "glib2",
+        use = "s4",
+        install_path = None
+        )
+
+    bld(features = 'c cprogram test',
+        target = 'test_xmmstypes',
+        source = test_xmmstypes_src,
+        includes = '. .. runner ../src ../src/include',
+        use = 'xmmstypes xmmsutils',
+        uselib = 'cunit ncurses valgrind DISABLE_WRITESTRINGS',
+        install_path = None
+        )
+
+    bld(features = 'c cprogram test',
+        target = 'test_server',
+        source = test_server_src,
+        includes = '. .. runner ../src ../src/includepriv ../src/include',
+        use = 'xmmstypes xmmsutils s4',
+        uselib = 'cunit ncurses valgrind glib2 gthread2 DISABLE_WRITESTRINGS',
+        install_path = None
+        )
+
+    bld(features = "c cprogram test",
+        target = "test_medialib",
+        source = test_mlib_src,
+        includes = '. .. runner ../src ../src/includepriv ../src/include',
+        use = "xmms2core xmmsipc xmmssocket xmmstypes xmmsutils s4 testutils",
+        uselib = "cunit ncurses valgrind glib2 gmodule2 gthread2 DISABLE_WRITESTRINGS",
+        install_path = None
+        )
+
+    bld(features = "c cprogram test",
+        target = "test_playlist",
+        source = test_playlist_src,
+        includes = '. .. runner ../src ../src/includepriv ../src/include',
+        use = "xmms2core xmmsipc xmmssocket xmmstypes xmmsutils s4 testutils",
+        uselib = "cunit ncurses valgrind glib2 gmodule2 gthread2 DISABLE_WRITESTRINGS",
+        install_path = None
+        )
+
+    bld(features = "c cprogram test",
+        target = "test_collection",
+        source = test_collection_src,
+        includes = '. .. runner ../src ../src/includepriv ../src/include',
+        use = "xmms2core xmmsipc xmmssocket xmmstypes xmmsutils s4 testutils",
+        uselib = "cunit ncurses valgrind glib2 gmodule2 gthread2 DISABLE_WRITESTRINGS",
+        install_path = None
+        )
+
+    bld(features = "c cprogram test",
+        target = "test_xform",
+        source = test_xform_src,
+        includes = '. .. runner ../src ../src/includepriv ../src/include',
+        use = "xmms2core xmmsipc xmmssocket xmmstypes xmmsutils s4 testutils",
+        uselib = "cunit ncurses valgrind glib2 gmodule2 gthread2 DISABLE_WRITESTRINGS",
+        install_path = None
+        )
+
+    bld(features = "c cprogram test",
+        target = "medialib-runner",
+        source = mlib_runner_src,
+        includes = '. .. runner ../src ../src/includepriv ../src/include',
+        use = "xmms2core xmmsipc xmmssocket xmmstypes xmmsutils s4 testutils",
+        uselib = "glib2 gmodule2 gthread2 DISABLE_WRITESTRINGS",
+        install_path = None,
+        ut_cwd = "."
+        )
+
+def options(o):
+    o.load("unittest", tooldir="waftools")

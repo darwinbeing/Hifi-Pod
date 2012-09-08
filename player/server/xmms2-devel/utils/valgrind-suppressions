@@ -1,0 +1,18 @@
+{
+   glib/thread-init
+   Memcheck:Leak
+   ...
+   fun:g_thread_init_glib
+}
+{
+   glibc/getpwuid
+   Memcheck:Leak
+   ...
+   fun:getpwuid
+}
+{
+   glib/gthreadtls
+   Memcheck:Leak
+   ...
+   fun:g_thread_create_posix_impl
+}

@@ -1,0 +1,9 @@
+from waftools.plugin import plugin
+import sys
+
+def plugin_configure(conf):
+    if not (sys.platform.startswith("netbsd")
+         or sys.platform.startswith("openbsd")):
+        conf.fatal("Sun plugin not supported on this platform")
+
+configure, build = plugin("sun", configure=plugin_configure, output_prio=33)

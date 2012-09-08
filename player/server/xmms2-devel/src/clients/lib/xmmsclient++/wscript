@@ -1,0 +1,43 @@
+import os
+from waftools import tool
+
+def build(bld):
+    source = """
+    bindata.cpp
+    client.cpp
+    collection.cpp
+    coll.cpp
+    config.cpp
+    dict.cpp
+    exceptions.cpp
+    helpers.cpp
+    list.cpp
+    listener.cpp
+    mainloop.cpp
+    medialib.cpp
+    playback.cpp
+    playlist.cpp
+    signal.cpp
+    stats.cpp
+    xform.cpp
+    """.split()
+
+    obj = bld(features='cxx cxxshlib',
+        target = 'xmmsclient++',
+        source = source,
+        includes = '../../../.. ../../../include ../../../includepriv',
+        uselib = 'BOOST socket',
+        use = 'xmmsclient',
+        vnum = '4.0.0'
+        )
+    tool.add_install_flag(bld, obj)
+
+def configure(conf):
+    conf.load('boost')
+    conf.check_boost()
+    conf.env.XMMS_PKGCONF_FILES.append(('xmms2-client-cpp', '-lxmmsclient -lxmmsclient++'))
+
+    return True
+
+def options(opt):
+    opt.tool_options('boost')

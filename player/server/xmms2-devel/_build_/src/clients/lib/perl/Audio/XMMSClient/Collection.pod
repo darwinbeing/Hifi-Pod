@@ -1,0 +1,322 @@
+=head1 NAME
+
+Audio::XMMSClient::Collection - Media collections for Audio::XMMSClient
+
+=head1 SYNOPSIS
+
+  use Audio::XMMSClient;
+
+  my $coll = Audio::XMMSClient::Collection->new('match', {
+          artist => 'Solche',
+  });
+
+=head1 METHODS
+
+=head2 new
+
+=over 4
+
+=item Arguments: $type, \%attributes?
+
+=item Arguments: $type, %attributes?
+
+=item Return Value: $collection
+
+=back
+
+  my $coll = Audio::XMMSClient::Collection->new('match', {
+          artist => 'Solche',
+  });
+
+Create a new collection instance of type C<$type>. Also sets the
+collections C<%attributes>, if given.
+
+=head2 parse
+
+=over 4
+
+=item Arguments: $pattern
+
+=item Return Value: $collection
+
+=back
+
+  my $coll = Audio::XMMSClient::Collection->parse("artist:Solche +compilation");
+
+Try to parse the given C<$pattern> to produce a collection structure.
+
+=head2 set_idlist
+
+=over 4
+
+=item Arguments: @ids
+
+=item Return Value: none
+
+=back
+
+  $coll->set_idlist(qw/1 42 1337/);
+
+Set the list of ids in the given collection. Note that the idlist is only
+relevant for idlist collections.
+
+=head2 add_operand
+
+=over 4
+
+=item Arguments: $operand
+
+=item Return Value: none
+
+=back
+
+  $coll->add_operand($other_coll);
+
+Add the C<$operand> to a given collection.
+
+=head2 remove_operand
+
+=over 4
+
+=item Arguments: $operand
+
+=item Return Value: none
+
+=back
+
+  $coll->remove_operand($other_coll);
+
+Remove all the occurences of the C<$operand> in the given collection.
+
+=head2 idlist_append
+
+=over 4
+
+=item Arguments: $id
+
+=item Return Value: $success
+
+=back
+
+  my $success = $coll->idlist_append(5);
+
+Append an C<$id> to the idlist.
+
+=head2 idlist_insert
+
+=over 4
+
+=item Arguments: $index, $id
+
+=item Return Value: $success
+
+=back
+
+  my $success = $coll->idlist_insert(42, 2);
+
+Insert an C<$id> at a given C<$index> in the idlist.
+
+=head2 idlist_move
+
+=over 4
+
+=item Arguments: $from, $to
+
+=item Return Value: $success
+
+=back
+
+  my $success = $coll->idlist_move(0, 3);
+
+Move a value of the idlist to a new position.
+
+=head2 idlist_clear
+
+=over 4
+
+=item Arguments: none
+
+=item Return Value: $success
+
+=back
+
+  my $success = $coll->idlist_clear;
+
+Empties the idlist.
+
+=head2 idlist_get_index
+
+=over 4
+
+=item Arguments: $index
+
+=item Return Value: $value | undef
+
+=back
+
+  my $value = $coll->idlist_get_index(2);
+
+Retrieves the value at the given C<$index> in the idlist.
+
+=head2 idlist_set_index
+
+=over 4
+
+=item Arguments: $index, $value
+
+=item Return Value: $success
+
+=back
+
+  my $success = $coll->idlist_set_index(3, 1);
+
+Sets the C<$value> at the given C<$index> in the idlist.
+
+=head2 idlist_get_size
+
+=over 4
+
+=item Arguments: none
+
+=item Return Value: $size
+
+=back
+
+  my $size = $coll->idlist_get_size;
+
+Get the size of the idlist.
+
+=head2 get_type
+
+=over 4
+
+=item Arguments: none
+
+=item Return Value: $type
+
+=back
+
+  my $type = $coll->get_type;
+
+Return the type of the collection. Valid types are "reference", "union",
+"intersection", "complement", "has", "equals", "notequal", "match", "smaller",
+"smallereq", "greater", "greatereq", "order", "limit", "mediaset", "idlist"
+
+=head2 get_idlist
+
+=over 4
+
+=item Arguments: none
+
+=item Return Value: @ids
+
+=back
+
+  my @ids = $coll->get_idlist;
+
+Return the list of ids stored in the collection. Note that this must not be
+confused with the content of the collection, which must be queried using
+L<Audio::XMMSClient/coll_query_ids>.
+
+=head2 operands
+
+=over 4
+
+=item Arguments: none
+
+=item Return Value: @operands
+
+=back
+
+  my @operands = $coll->operands;
+
+Get a list of operands of the collection.
+
+=head2 attribute_set
+
+=over 4
+
+=item Arguments: $key, $value
+
+=item Return Value: none
+
+=back
+
+  $coll->attribute_set(field => 'artist');
+
+Set an attribute C<$key> to C<$value> in the given collection.
+
+=head2 attribute_remove
+
+=over 4
+
+=item Arguments: $key
+
+=item Return Value: $success
+
+=back 
+
+  my $success = $coll->attribute_remove;
+
+Remove an attribute C<$key> from the given collection. The return value
+indicated whether the attribute was found (and removed).
+
+=head2 attribute_get
+
+=over 4
+
+=item Arguments: $key
+
+=item Return Value: $value | undef
+
+=back
+
+  my $value = $coll->attribute_get('field');
+
+Retrieve the C<$value> of the attribute C<$key> of the given collection. 
+
+=head2 attribute_list
+
+=over 4
+
+=item Arguments: none
+
+=item Return Value: %attributes
+
+=back
+
+  my %attributes = $coll->attributes_list;
+
+Get a hash of all C<%attributes> of the given collection.
+
+=head2 universe
+
+=over 4
+
+=item Arguments: none
+
+=item Return Value: $collection
+
+=back
+
+  my $universe = Audio::XMMSClient::Collection->universe;
+
+Returns a collection referencing the whole media library, i.e. the "All Media"
+collection.
+
+=head1 AUTHOR
+
+Florian Ragwitz <rafl@debian.org>
+
+=head1 SEE ALSO
+
+L<Audio::XMMSClient>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2006-2008, Florian Ragwitz
+
+This library is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself, either Perl version 5.8.8 or, at your option,
+any later version of Perl 5 you may have available.
+

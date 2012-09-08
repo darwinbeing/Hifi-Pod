@@ -1,0 +1,10 @@
+from waftools.plugin import plugin
+
+def plugin_configure(conf):
+    conf.check_cfg(package="libavcodec", uselib_store="avcodec",
+            args="--cflags --libs")
+    conf.check_cc(header_name="avcodec.h", uselib="avcodec", type="cshlib", mandatory=False)
+    conf.check_cc(header_name="libavcodec/avcodec.h", uselib="avcodec", type="cshlib", mandatory=False)
+
+configure, build = plugin('avcodec', configure=plugin_configure,
+                          libs=["avcodec"])

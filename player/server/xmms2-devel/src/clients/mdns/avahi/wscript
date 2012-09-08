@@ -1,0 +1,45 @@
+from waflib import Utils
+
+def build(bld):
+    bld(features = 'c cprogram',
+        target = 'xmms2-mdns-avahi',
+        source = ['mdns-avahi.c'],
+        includes = '. ../../../.. ../../../include',
+        uselib = 'glib2 avahiclient avahiglib',
+        use = 'xmmsclient-glib xmmsclient'
+        )
+
+    bld(features = 'subst',
+        target = 'xmms2-mdns-launcher.sh',
+        source = 'xmms2-mdns-launcher.sh.in',
+        install_path = '${SCRIPTDIR}',
+        chmod = Utils.O755,
+        PRG_PATH=bld.env.BINDIR
+        )
+
+    bld(features = 'c cprogram',
+        target = 'xmms2-find-avahi',
+        source = ['find-avahi.c'],
+        uselib = 'avahiclient'
+        )
+
+    bld(features = 'man',
+        source = 'xmms2-mdns-avahi.1'
+        )
+
+
+def configure(conf):
+  conf.check_cfg(
+          package = 'avahi-client',
+          uselib_store = 'avahiclient',
+          args = '--cflags --libs'
+          )
+  conf.check_cfg(
+          package = "avahi-glib",
+          uselib_store = "avahiglib", 
+          args = "--cflags --libs"
+          )
+
+
+def options(opt):
+  pass

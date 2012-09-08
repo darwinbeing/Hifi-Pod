@@ -1,0 +1,57 @@
+import os
+from waflib import Logs
+
+def build(bld):
+    source = """
+    perl_xmmsclient.c
+    """.split()
+
+    xss = """
+    XMMSClient.xs
+    XMMSClientPlaylist.xs
+    XMMSClientCollection.xs
+    XMMSClientResult.xs
+    """.split()
+
+    bld(features = 'c cshlib perlext',
+        target = 'XMMSClient',
+        includes = '. ../../../.. ../../../include ../../../includepriv',
+        source = source + xss,
+        use = 'xmmsclient',
+        install_path = '${INSTALLDIR_PERL_AUTO}',
+        mac_bundle = bld.env.mac_bundle_enabled
+        )
+
+    bld(features = 'perldoc',
+        source = xss,
+        install_path = '${INSTALLDIR_PERL_LIB}'
+        )
+
+    bld.install_files('${INSTALLDIR_PERL_LIB}/Audio', 'pm/Audio/XMMSClient.pm')
+    files = """
+    pm/Audio/XMMSClient/Sync.pm
+    pm/Audio/XMMSClient/Glib.pm
+    pm/Audio/XMMSClient/Collection.pm
+    """.split()
+    bld.install_files('${INSTALLDIR_PERL_LIB}/Audio/XMMSClient', files)
+
+
+def configure(conf):
+    conf.check_tool('perl')
+    conf.check_perl_version((5,7,3))
+    conf.check_perl_ext_devel()
+    conf.load('podselect', tooldir='waftools')
+    conf.check_tool('podselect')
+
+    if not os.path.commonprefix([conf.env.ARCHDIR_PERL, conf.env.PREFIX]).startswith(conf.env.PREFIX):
+        Logs.warn("Default perl libdir is not under PREFIX. specify the path "
+                  "manually using --with-perl-archdir if you don't want the "
+                  "perl bindings to be installed to " + conf.env.ARCHDIR_PERL)
+
+    conf.env.INSTALLDIR_PERL_AUTO = os.path.join(
+            conf.env.ARCHDIR_PERL, 'auto', 'Audio', 'XMMSClient')
+    conf.env.INSTALLDIR_PERL_LIB = conf.env.ARCHDIR_PERL
+
+
+def options(opt):
+    opt.tool_options('perl')
