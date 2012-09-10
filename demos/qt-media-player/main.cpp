@@ -45,17 +45,19 @@ Player::Player() : dialog(0) {
     toolBar.setMovable(false);
     toolBar.toggleViewAction()->setVisible(false);
 
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
+    
     openAction = toolBar.addAction(QIcon::fromTheme("document-open"),"Open");
     openAction->setCheckable(true);
     connect( openAction, SIGNAL(triggered(bool)), this, SLOT(toggleOpen(bool)));
-
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     playAction = toolBar.addAction(QIcon::fromTheme("media-playback-start"),"Play");
     playAction->setCheckable(true);
     playAction->setShortcut(QKeySequence("Space"));
     connect( playAction, SIGNAL(triggered(bool)), this, SLOT(togglePlay(bool)));
-
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     QAction* nextAction = toolBar.addAction(QIcon::fromTheme("media-skip-forward"),"Next",this,SLOT(next()));
-
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
 #ifdef USE_HOTKEY
     connect(new Hotkey("XF86AudioPlay",this), SIGNAL(activated()),
             playAction, SLOT(trigger()));
@@ -72,7 +74,7 @@ Player::Player() : dialog(0) {
     slow->setCheckable(true);
     connect( slow, SIGNAL(triggered(bool)), this, SLOT(toggleSlow(bool)));
 #endif
-
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     toolBar.addWidget( &elapsed );
     toolBar.addWidget( &slider );
     slider.setOrientation(Qt::Horizontal);
@@ -80,7 +82,7 @@ Player::Player() : dialog(0) {
     connect(&slider, SIGNAL(sliderMoved(int)), file, SLOT(seek(int)));
     connect(&slider, SIGNAL(sliderReleased()), this, SLOT(start()));
     toolBar.addWidget( &remaining );
-
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     playlist.setSelectionMode(QAbstractItemView::ExtendedSelection);
     playlist.setDefaultDropAction(Qt::MoveAction);
     playlist.setDragDropMode(QAbstractItemView::DragDrop);
@@ -89,12 +91,13 @@ Player::Player() : dialog(0) {
     playlist.setColumnCount(2);
     connect(&playlist,SIGNAL(itemActivated(QTreeWidgetItem*,int)), this,SLOT(play(QTreeWidgetItem*)) );
     restoreGeometry(QSettings().value("geometry").toByteArray());
-
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     QStringList args = QApplication::arguments(); args.removeFirst();
     if(args.length()) foreach(QString media, args) append(media);
     else foreach(QString media, QSettings().value("playlist").toStringList()) append(media);
     QTimer::singleShot(0,this,SLOT(loadMetadata()));
     QTimer::singleShot(0,this,SLOT(next()));
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
 }
 
 Player::~Player() {
@@ -125,10 +128,12 @@ void Player::toggleOpen(bool open) {
         dialog->setFileMode( QFileDialog::ExistingFiles );
 #endif
 #endif
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
         connect(dialog,SIGNAL(accepted()),this,SLOT(open()));
         connect(dialog,SIGNAL(finished(int)),dialog,SLOT(deleteLater()));
         connect(dialog,SIGNAL(finished(int)),openAction,SLOT(toggle()));
         dialog->show();
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     } else { dialog->close(); delete dialog; dialog=0; openAction->toggle(); }
 }
 

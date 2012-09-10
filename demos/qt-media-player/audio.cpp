@@ -54,8 +54,11 @@ void AlsaOutput::stop() {
 void AlsaOutput::write( AudioFrame* frame ) { buffer << frame; }
 
 bool AlsaOutput::playback() {
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     if( snd_pcm_state(pcm) == SND_PCM_STATE_XRUN ) { snd_pcm_prepare(pcm); }
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     while( buffer.size() > 1 && snd_pcm_avail_update(pcm) >= 160 ) {
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
         AudioFrame* frame = buffer.first();
 #ifdef USE_FSRC
         if(fsrc) {
@@ -86,10 +89,14 @@ bool AlsaOutput::playback() {
         } else
 #endif
         {
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
+    printf("***frame_size: %d***\n", frame->size);
             snd_pcm_writei(pcm,frame->data,frame->size/2/channels);
             frame->free();
         }
     }
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     if( snd_pcm_state(pcm) == SND_PCM_STATE_PREPARED && !buffer.isEmpty() ) snd_pcm_start(pcm);
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     return buffer.size() <= 1;
 }

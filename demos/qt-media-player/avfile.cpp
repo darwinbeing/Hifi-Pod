@@ -57,19 +57,34 @@ static StaticThis staticThis;
 
 AVFile::AVFile() : file(0), audioStream(0), videoStream(0), audio(0), video(0) {}
 void AVFile::open( QString path ) {
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     if(file) close();
     audioPTS=0;
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     if(avformat_open_input(&file, path.toUtf8(),0,0)) { file=0; return; }
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     avformat_find_stream_info(file, NULL);
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     for( uint i=0; i<file->nb_streams; i++ ) {
+	 printf("file->nb_streams: %d\n", file->nb_streams);
+	 
         if( !audioOutput.empty() && file->streams[i]->codec->codec_type==AVMEDIA_TYPE_AUDIO ) {
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
             audioStream = file->streams[i];
             audio = audioStream->codec;
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
             audio->sample_fmt = AV_SAMPLE_FMT_FLT;
             AVCodec* codec = avcodec_find_decoder(audio->codec_id);
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
             if( codec && avcodec_open2( audio, codec, NULL ) >= 0 ) {
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
                 audioFormat.frequency = audio->sample_rate;
                 audioFormat.channels = audio->channels;
+
+		printf("sample_rate: %d\n", audio->sample_rate);
+		printf("channels: %d\n", audio->channels);
+		
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
                 Q_ASSERT_X( audioFormat.frequency, "AVFile::open", path.toAscii() );
                 Q_ASSERT_X( audio->sample_fmt == AV_SAMPLE_FMT_S16, "AVFile::open", path.toAscii() );
             }
@@ -131,8 +146,7 @@ QString AVFile::metadata( QString key ) {
 #endif
 
 
-/*
-int avcodec_decode_audio3(AVCodecContext *avctx, int16_t *samples,
+int avcodec_decode_audio(AVCodecContext *avctx, int16_t *samples,
                          int *frame_size_ptr,
                          AVPacket *avpkt)
 {
@@ -177,20 +191,23 @@ int avcodec_decode_audio3(AVCodecContext *avctx, int16_t *samples,
     }
     return ret;
 }
-*/
 
 void AVFile::update() {
     if(!playing) return;
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     for(;;) {
         bool needAudio=false,needVideo=false;
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
         if(hasAudio()) foreach(AudioOutput* output, audioOutput) if( output->playback() ) needAudio=true;
         if( hasVideo() ) {
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
             if( frames.isEmpty() ) needVideo=true;
             else if( getTime() >= frames.first() ) {
                 frames.takeFirst();
                 if(hasVideo()) foreach(VideoOutput* output, videoOutput) if( output->display() ) needVideo=true;
             }
         }
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
         if( !needAudio && !needVideo ) break;
 
         AVPacket packet; int err;
@@ -199,20 +216,25 @@ void AVFile::update() {
             if( audioOutput.empty() ) continue;
             AVPacket pkt=packet;
             while( pkt.size > 0 ) {
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
                 AudioFrame* frame = new AudioFrame( AVCODEC_MAX_AUDIO_FRAME_SIZE );
-                int size = avcodec_decode_audio3( audio, frame->data, &frame->size, &pkt );
+                int size = avcodec_decode_audio( audio, frame->data, &frame->size, &pkt );
+
+		printf("***size: %d***\n", frame->size);
                 if( size <= 0 ) { frame->free(); break; }
                 pkt.size -= size;
                 pkt.data += size;
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
                 if( frame->size ) {
 		     AVIOContext *pb = file->pb;
 		     int file_size = avio_size(pb);
-
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
                     if(pkt.dts>=0) audioPTS = pkt.dts*av_q2d(audioStream->time_base)*1000;
                     else audioPTS=pkt.pos*duration()/file_size;
                     foreach(AudioOutput* output, audioOutput) output->write( frame->copy() );
                 }
                 frame->free();
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
             }
         }
         else if( file->streams[packet.stream_index]==videoStream ) {
@@ -232,5 +254,6 @@ void AVFile::update() {
         }
         av_free_packet(&packet);
     }
+    printf("***%s: %d***\n", __FUNCTION__, __LINE__);
     emit positionChanged();
 }
