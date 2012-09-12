@@ -1,5 +1,5 @@
 /*  XMMS2 - X Music Multiplexer System
- *  Copyright (C) 2003-2011 XMMS2 Team
+ *  Copyright (C) 2003-2012 XMMS2 Team
  *
  *  PLUGINS ARE NOT CONSIDERED TO BE DERIVED WORK !!!
  *
@@ -27,6 +27,10 @@
  */
 #define BUFFER_TIME        500000
 #define MAX_CHANNELS       8
+
+
+#define XMMS2_ALSA_RETRY_NR  5
+
 
 /*
  * Type definitions
@@ -389,6 +393,7 @@ xmms_alsa_close (xmms_output_t *output)
 	}
 }
 
+#if 0
 /**
  * Setup hardware parameters.
  *
@@ -485,6 +490,205 @@ xmms_alsa_set_hwparams (xmms_alsa_data_t *data,
 		                snd_strerror (err));
 		return FALSE;
 	}
+
+	return TRUE;
+}
+
+#endif
+
+/**
+ * Setup hardware parameters.
+ *
+ * @param data Internal plugin structure.
+ *
+ * @return TRUE on success, FALSE on error
+ */
+static gboolean
+xmms_alsa_set_hwparams (xmms_alsa_data_t *data,
+                        const xmms_stream_type_t *format)
+{
+	snd_pcm_format_t alsa_format = SND_PCM_FORMAT_UNKNOWN;
+	gint err, tmp, i, fmt;
+	guint requested_buffer_time = BUFFER_TIME;
+	snd_pcm_hw_params_t *hwparams;
+	int retry = XMMS2_ALSA_RETRY_NR;
+	unsigned int period_time, period_time_ro;
+	unsigned int buffer_time;
+	snd_pcm_uframes_t alsa_buffer_size;
+	snd_pcm_uframes_t alsa_period_size;
+	snd_pcm_state_t state;
+
+	g_return_val_if_fail (data, FALSE);
+
+	buffer_time = requested_buffer_time;
+	period_time_ro = period_time = 0;
+configure_hw:
+	/* configure HW params */
+	snd_pcm_hw_params_alloca (&hwparams);
+
+	/* what alsa format does this format correspond to? */
+	fmt = xmms_stream_type_get_int (format, XMMS_STREAM_TYPE_FMT_FORMAT);
+	for (i = 0; i < G_N_ELEMENTS (formats); i++) {
+		if (formats[i].xmms_fmt == fmt) {
+			alsa_format = formats[i].alsa_fmt;
+			break;
+		}
+	}
+
+	g_return_val_if_fail (alsa_format != SND_PCM_FORMAT_UNKNOWN, FALSE);
+
+	/* Setup all parameters to configuration space */
+	err = snd_pcm_hw_params_any (data->pcm, hwparams);
+	if (err < 0) {
+		xmms_log_error ("Broken configuration for playback: no configurations "
+		                "available: %s", snd_strerror (err));
+		return FALSE;
+	}
+
+	/* Set the interleaved read/write format */
+	err = snd_pcm_hw_params_set_access (data->pcm, hwparams,
+	                                    SND_PCM_ACCESS_RW_INTERLEAVED);
+	if (err < 0) {
+		xmms_log_error ("Access type not available for playback: %s",
+		                snd_strerror (err));
+		return FALSE;
+	}
+
+	/* Set the sample format */
+	err = snd_pcm_hw_params_set_format (data->pcm, hwparams, alsa_format);
+	if (err < 0) {
+		xmms_log_error ("Sample format not available for playback: %s",
+		                snd_strerror (err));
+		return FALSE;
+	}
+
+	/* Set the count of channels */
+	tmp = xmms_stream_type_get_int (format, XMMS_STREAM_TYPE_FMT_CHANNELS);
+	err = snd_pcm_hw_params_set_channels (data->pcm, hwparams, tmp);
+	if (err < 0) {
+		xmms_log_error ("Channels count (%i) not available for playbacks: %s",
+		                tmp, snd_strerror (err));
+		return FALSE;
+	}
+
+	/* Set the sample rate.
+	 * Note: don't use snd_pcm_hw_params_set_rate_near(), we want to fail here
+	 *       if the core passed an unsupported samplerate to us!
+	 */
+	tmp = xmms_stream_type_get_int (format, XMMS_STREAM_TYPE_FMT_SAMPLERATE);
+	err = snd_pcm_hw_params_set_rate (data->pcm, hwparams, tmp, 0);
+	if (err < 0) {
+		xmms_log_error ("Rate %iHz not available for playback: %s",
+		                tmp, snd_strerror (err));
+		return FALSE;
+	}
+
+	snd_pcm_uframes_t buffer_size_min, buffer_size_max;
+	snd_pcm_hw_params_get_buffer_size_min(hwparams, &buffer_size_min);
+	snd_pcm_hw_params_get_buffer_size_max(hwparams, &buffer_size_max);
+	unsigned buffer_time_min, buffer_time_max;
+	snd_pcm_hw_params_get_buffer_time_min(hwparams, &buffer_time_min, 0);
+	snd_pcm_hw_params_get_buffer_time_max(hwparams, &buffer_time_max, 0);
+	g_debug("buffer: size=%u..%u time=%u..%u",
+		(unsigned)buffer_size_min, (unsigned)buffer_size_max,
+		buffer_time_min, buffer_time_max);
+
+	snd_pcm_uframes_t period_size_min, period_size_max;
+	snd_pcm_hw_params_get_period_size_min(hwparams, &period_size_min, 0);
+	snd_pcm_hw_params_get_period_size_max(hwparams, &period_size_max, 0);
+	unsigned period_time_min, period_time_max;
+	snd_pcm_hw_params_get_period_time_min(hwparams, &period_time_min, 0);
+	snd_pcm_hw_params_get_period_time_max(hwparams, &period_time_max, 0);
+	g_debug("period: size=%u..%u time=%u..%u",
+		(unsigned)period_size_min, (unsigned)period_size_max,
+		period_time_min, period_time_max);
+
+	if (buffer_time > 0) {
+		err = snd_pcm_hw_params_set_buffer_time_near(data->pcm, hwparams,
+							     &buffer_time, NULL);
+		if (err < 0)
+		    return FALSE;
+	} else {
+		err = snd_pcm_hw_params_get_buffer_time(hwparams, &buffer_time,
+							NULL);
+		if (err < 0)
+			buffer_time = 0;
+	}
+
+	if (period_time_ro == 0 && buffer_time >= 10000) {
+		period_time_ro = period_time = buffer_time / 4;
+
+		g_debug("default period_time = buffer_time/4 = %u/4 = %u",
+			buffer_time, period_time);
+	}
+
+
+	tmp = requested_buffer_time;
+	/* err = snd_pcm_hw_params_set_buffer_time_near (data->pcm, hwparams, */
+	/*                                               &requested_buffer_time, NULL); */
+	/* if (err < 0) { */
+	/* 	xmms_log_error ("Unable to set buffer time %i for playback: %s", tmp, */
+	/* 	                snd_strerror (err)); */
+	/* 	return FALSE; */
+	/* } */
+
+
+	if (period_time_ro > 0) {
+		period_time = period_time_ro;
+		err = snd_pcm_hw_params_set_period_time_near(data->pcm, hwparams,
+							     &period_time, NULL);
+		if (err < 0)
+		    return FALSE;
+	}
+
+
+	/* XMMS_DBG ("Buffer time requested: %dms, got: %dms", */
+	/*           tmp / 1000, requested_buffer_time / 1000); */
+
+	/* Put the hardware parameters into good use */
+	/* err = snd_pcm_hw_params (data->pcm, hwparams); */
+	/* if (err < 0) { */
+	/* 	xmms_log_error ("Unable to set hw params for playback: %s", */
+	/* 	                snd_strerror (err)); */
+	/* 	return FALSE; */
+	/* } */
+
+
+	// FIXME check_topology may be called more than once.
+	// Check the state of the stream
+	// Ensure that the pcm is in a state where we can still mess with the hw_params
+
+	state=snd_pcm_state(data->pcm);
+	if ( state== SND_PCM_STATE_RUNNING) {// If stream is running, don't change any parameters
+	} else if(state == SND_PCM_STATE_XRUN ) {
+	    snd_pcm_prepare (data->pcm); // Prepare stream on underrun, and we can set parameters;
+	}
+	
+	err = snd_pcm_hw_params(data->pcm, hwparams);
+	if (err == -EPIPE && --retry > 0 && period_time_ro > 0) {
+		period_time_ro = period_time_ro >> 1;
+		goto configure_hw;
+	} else if (err < 0) {
+	    g_debug("snd_pcm_hw_params err: %d\n", err);
+		xmms_log_error ("Unable to set hw params for playback: %s",
+		                snd_strerror (err));
+
+		return FALSE;
+	}
+	
+	if (retry != XMMS2_ALSA_RETRY_NR)
+		g_debug("ALSA period_time set to %d\n", period_time);
+
+
+	err = snd_pcm_hw_params_get_buffer_size(hwparams, &alsa_buffer_size);
+	if (err < 0)
+		return FALSE;
+
+	err = snd_pcm_hw_params_get_period_size(hwparams, &alsa_period_size,
+						NULL);
+	if (err < 0)
+		return FALSE;
+
 
 	return TRUE;
 }
