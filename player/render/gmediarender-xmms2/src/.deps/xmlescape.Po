@@ -1,0 +1,79 @@
+xmlescape.o: xmlescape.c \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/string.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/features.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/predefs.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/sys/cdefs.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/wordsize.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/gnu/stubs.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/include/stddef.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/xlocale.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/stdlib.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/waitflags.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/waitstatus.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/endian.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/endian.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/byteswap.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/sys/types.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/types.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/typesizes.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/time.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/sys/select.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/select.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/sigset.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/time.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/sys/sysmacros.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/pthreadtypes.h \
+ /usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/alloca.h \
+ xmlescape.h
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/string.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/features.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/predefs.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/sys/cdefs.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/wordsize.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/gnu/stubs.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../lib/gcc/arm-arago-linux-gnueabi/4.5.3/include/stddef.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/xlocale.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/stdlib.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/waitflags.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/waitstatus.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/endian.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/endian.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/byteswap.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/sys/types.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/types.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/typesizes.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/time.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/sys/select.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/select.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/sigset.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/time.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/sys/sysmacros.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/bits/pthreadtypes.h:
+
+/usr/local/ti-sdk-am335x-evm/linux-devkit/bin/../arm-arago-linux-gnueabi/usr/include/alloca.h:
+
+xmlescape.h:
